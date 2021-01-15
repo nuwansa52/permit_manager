@@ -50,26 +50,26 @@ Partial Class login
         'userNameLable
         '
         Me.userNameLable.AutoSize = True
-        Me.userNameLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userNameLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userNameLable.Location = New System.Drawing.Point(404, 123)
         Me.userNameLable.Name = "userNameLable"
-        Me.userNameLable.Size = New System.Drawing.Size(110, 25)
+        Me.userNameLable.Size = New System.Drawing.Size(119, 25)
         Me.userNameLable.TabIndex = 5
         Me.userNameLable.Text = "User Name"
         '
         'passwordLable
         '
         Me.passwordLable.AutoSize = True
-        Me.passwordLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.passwordLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.passwordLable.Location = New System.Drawing.Point(416, 176)
         Me.passwordLable.Name = "passwordLable"
-        Me.passwordLable.Size = New System.Drawing.Size(98, 25)
+        Me.passwordLable.Size = New System.Drawing.Size(106, 25)
         Me.passwordLable.TabIndex = 6
         Me.passwordLable.Text = "Password"
         '
         'clear
         '
-        Me.clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.Location = New System.Drawing.Point(519, 247)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(81, 34)
@@ -79,7 +79,7 @@ Partial Class login
         '
         'letMeIn
         '
-        Me.letMeIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.letMeIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.letMeIn.Location = New System.Drawing.Point(619, 247)
         Me.letMeIn.Name = "letMeIn"
         Me.letMeIn.Size = New System.Drawing.Size(80, 35)

@@ -34,7 +34,7 @@ Partial Class systemUser
         Me.lastNameInput = New System.Windows.Forms.TextBox()
         Me.passwordInput = New System.Windows.Forms.TextBox()
         Me.save = New System.Windows.Forms.Button()
-        Me.clear = New System.Windows.Forms.Button()
+        Me.clearbtn = New System.Windows.Forms.Button()
         Me.roleInput = New System.Windows.Forms.ComboBox()
         Me.departmentInput = New System.Windows.Forms.ComboBox()
         Me.agOfficeInput = New System.Windows.Forms.ComboBox()
@@ -43,142 +43,151 @@ Partial Class systemUser
         'firstName
         '
         Me.firstName.AutoSize = True
-        Me.firstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.firstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.firstName.Location = New System.Drawing.Point(68, 139)
         Me.firstName.Name = "firstName"
-        Me.firstName.Size = New System.Drawing.Size(76, 17)
+        Me.firstName.Size = New System.Drawing.Size(83, 16)
         Me.firstName.TabIndex = 0
         Me.firstName.Text = "First Name"
         '
         'userName
         '
         Me.userName.AutoSize = True
-        Me.userName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userName.Location = New System.Drawing.Point(65, 71)
         Me.userName.Name = "userName"
-        Me.userName.Size = New System.Drawing.Size(79, 17)
+        Me.userName.Size = New System.Drawing.Size(86, 16)
         Me.userName.TabIndex = 1
         Me.userName.Text = "User Name"
         '
         'lastName
         '
         Me.lastName.AutoSize = True
-        Me.lastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lastName.Location = New System.Drawing.Point(442, 139)
         Me.lastName.Name = "lastName"
-        Me.lastName.Size = New System.Drawing.Size(76, 17)
+        Me.lastName.Size = New System.Drawing.Size(82, 16)
         Me.lastName.TabIndex = 2
         Me.lastName.Text = "Last Name"
         '
         'role
         '
         Me.role.AutoSize = True
-        Me.role.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.role.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.role.Location = New System.Drawing.Point(107, 280)
         Me.role.Name = "role"
-        Me.role.Size = New System.Drawing.Size(37, 17)
+        Me.role.Size = New System.Drawing.Size(41, 16)
         Me.role.TabIndex = 3
         Me.role.Text = "Role"
         '
         'agOffice
         '
         Me.agOffice.AutoSize = True
-        Me.agOffice.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agOffice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.agOffice.Location = New System.Drawing.Point(75, 208)
         Me.agOffice.Name = "agOffice"
-        Me.agOffice.Size = New System.Drawing.Size(69, 17)
+        Me.agOffice.Size = New System.Drawing.Size(73, 16)
         Me.agOffice.TabIndex = 4
         Me.agOffice.Text = "AG Office"
         '
         'department
         '
         Me.department.AutoSize = True
-        Me.department.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.department.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.department.Location = New System.Drawing.Point(436, 208)
         Me.department.Name = "department"
-        Me.department.Size = New System.Drawing.Size(82, 17)
+        Me.department.Size = New System.Drawing.Size(88, 16)
         Me.department.TabIndex = 5
         Me.department.Text = "Department"
         '
         'password
         '
         Me.password.AutoSize = True
-        Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.password.Location = New System.Drawing.Point(449, 280)
         Me.password.Name = "password"
-        Me.password.Size = New System.Drawing.Size(69, 17)
+        Me.password.Size = New System.Drawing.Size(76, 16)
         Me.password.TabIndex = 6
         Me.password.Text = "Password"
         '
         'userNameInput
         '
+        Me.userNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userNameInput.Location = New System.Drawing.Point(184, 70)
         Me.userNameInput.Name = "userNameInput"
-        Me.userNameInput.Size = New System.Drawing.Size(186, 20)
+        Me.userNameInput.Size = New System.Drawing.Size(186, 22)
         Me.userNameInput.TabIndex = 8
         '
         'firstNameInput
         '
+        Me.firstNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.firstNameInput.Location = New System.Drawing.Point(184, 138)
         Me.firstNameInput.Name = "firstNameInput"
-        Me.firstNameInput.Size = New System.Drawing.Size(186, 20)
+        Me.firstNameInput.Size = New System.Drawing.Size(186, 22)
         Me.firstNameInput.TabIndex = 9
         '
         'lastNameInput
         '
+        Me.lastNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lastNameInput.Location = New System.Drawing.Point(560, 138)
         Me.lastNameInput.Name = "lastNameInput"
-        Me.lastNameInput.Size = New System.Drawing.Size(186, 20)
+        Me.lastNameInput.Size = New System.Drawing.Size(186, 22)
         Me.lastNameInput.TabIndex = 12
         '
         'passwordInput
         '
+        Me.passwordInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.passwordInput.Location = New System.Drawing.Point(560, 279)
         Me.passwordInput.Name = "passwordInput"
-        Me.passwordInput.Size = New System.Drawing.Size(186, 20)
+        Me.passwordInput.Size = New System.Drawing.Size(186, 22)
         Me.passwordInput.TabIndex = 14
         '
         'save
         '
-        Me.save.Location = New System.Drawing.Point(570, 395)
+        Me.save.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.save.Location = New System.Drawing.Point(590, 380)
         Me.save.Name = "save"
-        Me.save.Size = New System.Drawing.Size(75, 23)
+        Me.save.Size = New System.Drawing.Size(75, 38)
         Me.save.TabIndex = 15
         Me.save.Text = "Save"
         Me.save.UseVisualStyleBackColor = True
         '
-        'clear
+        'clearbtn
         '
-        Me.clear.Location = New System.Drawing.Point(687, 395)
-        Me.clear.Name = "clear"
-        Me.clear.Size = New System.Drawing.Size(75, 23)
-        Me.clear.TabIndex = 16
-        Me.clear.Text = "Clear"
-        Me.clear.UseVisualStyleBackColor = True
+        Me.clearbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearbtn.Location = New System.Drawing.Point(671, 380)
+        Me.clearbtn.Name = "clearbtn"
+        Me.clearbtn.Size = New System.Drawing.Size(75, 38)
+        Me.clearbtn.TabIndex = 16
+        Me.clearbtn.Text = "Clear"
+        Me.clearbtn.UseVisualStyleBackColor = True
         '
         'roleInput
         '
+        Me.roleInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.roleInput.FormattingEnabled = True
         Me.roleInput.Items.AddRange(New Object() {"ROLE_ADMIN", "ROLE_USER", "ROLE_MANAGER", "ROLE_AUTH_OFFICER"})
         Me.roleInput.Location = New System.Drawing.Point(184, 280)
         Me.roleInput.Name = "roleInput"
-        Me.roleInput.Size = New System.Drawing.Size(186, 21)
+        Me.roleInput.Size = New System.Drawing.Size(186, 24)
         Me.roleInput.TabIndex = 17
         '
         'departmentInput
         '
+        Me.departmentInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.departmentInput.FormattingEnabled = True
         Me.departmentInput.Location = New System.Drawing.Point(560, 207)
         Me.departmentInput.Name = "departmentInput"
-        Me.departmentInput.Size = New System.Drawing.Size(186, 21)
+        Me.departmentInput.Size = New System.Drawing.Size(186, 24)
         Me.departmentInput.TabIndex = 18
         '
         'agOfficeInput
         '
+        Me.agOfficeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.agOfficeInput.FormattingEnabled = True
         Me.agOfficeInput.Location = New System.Drawing.Point(184, 207)
         Me.agOfficeInput.Name = "agOfficeInput"
-        Me.agOfficeInput.Size = New System.Drawing.Size(186, 21)
+        Me.agOfficeInput.Size = New System.Drawing.Size(186, 24)
         Me.agOfficeInput.TabIndex = 19
         '
         'systemUser
@@ -189,7 +198,7 @@ Partial Class systemUser
         Me.Controls.Add(Me.agOfficeInput)
         Me.Controls.Add(Me.departmentInput)
         Me.Controls.Add(Me.roleInput)
-        Me.Controls.Add(Me.clear)
+        Me.Controls.Add(Me.clearbtn)
         Me.Controls.Add(Me.save)
         Me.Controls.Add(Me.passwordInput)
         Me.Controls.Add(Me.lastNameInput)
@@ -221,7 +230,7 @@ Partial Class systemUser
     Friend WithEvents lastNameInput As TextBox
     Friend WithEvents passwordInput As TextBox
     Friend WithEvents save As Button
-    Friend WithEvents clear As Button
+    Friend WithEvents clearbtn As Button
     Friend WithEvents roleInput As ComboBox
     Friend WithEvents departmentInput As ComboBox
     Friend WithEvents agOfficeInput As ComboBox

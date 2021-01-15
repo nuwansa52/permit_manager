@@ -44,7 +44,7 @@ Partial Class DivisionalSecretariat
         '
         Me.divisionalSectxbox.AutoSize = True
         Me.divisionalSectxbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.divisionalSectxbox.Location = New System.Drawing.Point(36, 157)
+        Me.divisionalSectxbox.Location = New System.Drawing.Point(36, 144)
         Me.divisionalSectxbox.Name = "divisionalSectxbox"
         Me.divisionalSectxbox.Size = New System.Drawing.Size(157, 16)
         Me.divisionalSectxbox.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class DivisionalSecretariat
         'divisionalSecTextBox
         '
         Me.divisionalSecTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.divisionalSecTextBox.Location = New System.Drawing.Point(213, 157)
+        Me.divisionalSecTextBox.Location = New System.Drawing.Point(213, 144)
         Me.divisionalSecTextBox.Name = "divisionalSecTextBox"
         Me.divisionalSecTextBox.Size = New System.Drawing.Size(233, 22)
         Me.divisionalSecTextBox.TabIndex = 1
@@ -61,7 +61,7 @@ Partial Class DivisionalSecretariat
         'savebtn
         '
         Me.savebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.savebtn.Location = New System.Drawing.Point(285, 250)
+        Me.savebtn.Location = New System.Drawing.Point(271, 246)
         Me.savebtn.Name = "savebtn"
         Me.savebtn.Size = New System.Drawing.Size(85, 39)
         Me.savebtn.TabIndex = 2
@@ -71,7 +71,7 @@ Partial Class DivisionalSecretariat
         'clearbtn
         '
         Me.clearbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearbtn.Location = New System.Drawing.Point(396, 250)
+        Me.clearbtn.Location = New System.Drawing.Point(382, 246)
         Me.clearbtn.Name = "clearbtn"
         Me.clearbtn.Size = New System.Drawing.Size(81, 39)
         Me.clearbtn.TabIndex = 2
@@ -91,7 +91,7 @@ Partial Class DivisionalSecretariat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(555, 323)
+        Me.ClientSize = New System.Drawing.Size(511, 316)
         Me.Controls.Add(Me.cityComboBox)
         Me.Controls.Add(Me.clearbtn)
         Me.Controls.Add(Me.savebtn)
