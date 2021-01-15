@@ -29,7 +29,7 @@ Public Class systemUser
         End Try
     End Sub
 
-    Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click
+    Private Sub save_Click(sender As Object, e As EventArgs)
 
         con = dbConn.dbConnect()
 
@@ -49,5 +49,7 @@ Public Class systemUser
             End Using
         End If
     End Sub
-
+    Private Sub DistrictToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DistrictToolStripMenuItem.Click
+        district.Show()
+    End Sub
 End Class

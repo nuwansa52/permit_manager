@@ -24,15 +24,15 @@ Partial Class gramaSewaWasama
     Private Sub InitializeComponent()
         Me.gramasewaWasamLabel = New System.Windows.Forms.Label()
         Me.gramasewaWasTextBox = New System.Windows.Forms.TextBox()
-        Me.saveButton = New System.Windows.Forms.Button()
-        Me.clearButton = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'gramasewaWasamLabel
         '
         Me.gramasewaWasamLabel.AutoSize = True
         Me.gramasewaWasamLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gramasewaWasamLabel.Location = New System.Drawing.Point(65, 94)
+        Me.gramasewaWasamLabel.Location = New System.Drawing.Point(43, 78)
         Me.gramasewaWasamLabel.Name = "gramasewaWasamLabel"
         Me.gramasewaWasamLabel.Size = New System.Drawing.Size(155, 16)
         Me.gramasewaWasamLabel.TabIndex = 0
@@ -41,42 +41,42 @@ Partial Class gramaSewaWasama
         'gramasewaWasTextBox
         '
         Me.gramasewaWasTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gramasewaWasTextBox.Location = New System.Drawing.Point(226, 90)
+        Me.gramasewaWasTextBox.Location = New System.Drawing.Point(222, 75)
         Me.gramasewaWasTextBox.Name = "gramasewaWasTextBox"
         Me.gramasewaWasTextBox.Size = New System.Drawing.Size(214, 22)
         Me.gramasewaWasTextBox.TabIndex = 1
         '
-        'saveButton
+        'clearBtn
         '
-        Me.saveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveButton.Location = New System.Drawing.Point(228, 151)
-        Me.saveButton.Name = "saveButton"
-        Me.saveButton.Size = New System.Drawing.Size(75, 34)
-        Me.saveButton.TabIndex = 2
-        Me.saveButton.Text = "Save"
-        Me.saveButton.UseVisualStyleBackColor = True
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(386, 140)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
+        Me.clearBtn.TabIndex = 3
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
         '
-        'clearButton
+        'saveBtn
         '
-        Me.clearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearButton.Location = New System.Drawing.Point(309, 151)
-        Me.clearButton.Name = "clearButton"
-        Me.clearButton.Size = New System.Drawing.Size(75, 34)
-        Me.clearButton.TabIndex = 2
-        Me.clearButton.Text = "Clear"
-        Me.clearButton.UseVisualStyleBackColor = True
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(264, 140)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
+        Me.saveBtn.TabIndex = 4
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
         '
         'gramaSewaWasama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(518, 273)
-        Me.Controls.Add(Me.clearButton)
-        Me.Controls.Add(Me.saveButton)
+        Me.ClientSize = New System.Drawing.Size(518, 213)
+        Me.Controls.Add(Me.clearBtn)
+        Me.Controls.Add(Me.saveBtn)
         Me.Controls.Add(Me.gramasewaWasTextBox)
         Me.Controls.Add(Me.gramasewaWasamLabel)
         Me.Name = "gramaSewaWasama"
-        Me.Text = "gramaSewaWasama"
+        Me.Text = "Grama Sewa Wasama"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -84,6 +84,6 @@ Partial Class gramaSewaWasama
 
     Friend WithEvents gramasewaWasamLabel As Label
     Friend WithEvents gramasewaWasTextBox As TextBox
-    Friend WithEvents saveButton As Button
-    Friend WithEvents clearButton As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

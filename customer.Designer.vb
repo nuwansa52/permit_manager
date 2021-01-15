@@ -24,8 +24,6 @@ Partial Class customer
     Private Sub InitializeComponent()
         Me.firstNameLabel = New System.Windows.Forms.Label()
         Me.firstNameTextBox = New System.Windows.Forms.TextBox()
-        Me.saveBtn = New System.Windows.Forms.Button()
-        Me.clearBtn = New System.Windows.Forms.Button()
         Me.lastNameLable = New System.Windows.Forms.Label()
         Me.otherNameLabel = New System.Windows.Forms.Label()
         Me.nicLabel = New System.Windows.Forms.Label()
@@ -53,6 +51,8 @@ Partial Class customer
         Me.addressGroupBox = New System.Windows.Forms.GroupBox()
         Me.contactDetailsGrpBox = New System.Windows.Forms.GroupBox()
         Me.otherGroupBox = New System.Windows.Forms.GroupBox()
+        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
         Me.addressGroupBox.SuspendLayout()
         Me.contactDetailsGrpBox.SuspendLayout()
         Me.otherGroupBox.SuspendLayout()
@@ -62,7 +62,7 @@ Partial Class customer
         '
         Me.firstNameLabel.AutoSize = True
         Me.firstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameLabel.Location = New System.Drawing.Point(56, 9)
+        Me.firstNameLabel.Location = New System.Drawing.Point(62, 74)
         Me.firstNameLabel.Name = "firstNameLabel"
         Me.firstNameLabel.Size = New System.Drawing.Size(83, 16)
         Me.firstNameLabel.TabIndex = 0
@@ -71,36 +71,16 @@ Partial Class customer
         'firstNameTextBox
         '
         Me.firstNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameTextBox.Location = New System.Drawing.Point(152, 5)
+        Me.firstNameTextBox.Location = New System.Drawing.Point(158, 70)
         Me.firstNameTextBox.Name = "firstNameTextBox"
         Me.firstNameTextBox.Size = New System.Drawing.Size(226, 22)
         Me.firstNameTextBox.TabIndex = 1
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(523, 323)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 44)
-        Me.saveBtn.TabIndex = 2
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(619, 323)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 44)
-        Me.clearBtn.TabIndex = 2
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
         '
         'lastNameLable
         '
         Me.lastNameLable.AutoSize = True
         Me.lastNameLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameLable.Location = New System.Drawing.Point(420, 9)
+        Me.lastNameLable.Location = New System.Drawing.Point(426, 74)
         Me.lastNameLable.Name = "lastNameLable"
         Me.lastNameLable.Size = New System.Drawing.Size(82, 16)
         Me.lastNameLable.TabIndex = 0
@@ -110,7 +90,7 @@ Partial Class customer
         '
         Me.otherNameLabel.AutoSize = True
         Me.otherNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.otherNameLabel.Location = New System.Drawing.Point(56, 38)
+        Me.otherNameLabel.Location = New System.Drawing.Point(62, 103)
         Me.otherNameLabel.Name = "otherNameLabel"
         Me.otherNameLabel.Size = New System.Drawing.Size(90, 16)
         Me.otherNameLabel.TabIndex = 0
@@ -120,7 +100,7 @@ Partial Class customer
         '
         Me.nicLabel.AutoSize = True
         Me.nicLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nicLabel.Location = New System.Drawing.Point(56, 67)
+        Me.nicLabel.Location = New System.Drawing.Point(62, 132)
         Me.nicLabel.Name = "nicLabel"
         Me.nicLabel.Size = New System.Drawing.Size(33, 16)
         Me.nicLabel.TabIndex = 0
@@ -160,7 +140,7 @@ Partial Class customer
         '
         Me.mobileNoLabel.AutoSize = True
         Me.mobileNoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mobileNoLabel.Location = New System.Drawing.Point(-3, 20)
+        Me.mobileNoLabel.Location = New System.Drawing.Point(3, 26)
         Me.mobileNoLabel.Name = "mobileNoLabel"
         Me.mobileNoLabel.Size = New System.Drawing.Size(79, 16)
         Me.mobileNoLabel.TabIndex = 0
@@ -170,7 +150,7 @@ Partial Class customer
         '
         Me.landLineNoLabel.AutoSize = True
         Me.landLineNoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.landLineNoLabel.Location = New System.Drawing.Point(-3, 50)
+        Me.landLineNoLabel.Location = New System.Drawing.Point(3, 56)
         Me.landLineNoLabel.Name = "landLineNoLabel"
         Me.landLineNoLabel.Size = New System.Drawing.Size(96, 16)
         Me.landLineNoLabel.TabIndex = 0
@@ -180,7 +160,7 @@ Partial Class customer
         '
         Me.typeLabel.AutoSize = True
         Me.typeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.typeLabel.Location = New System.Drawing.Point(-2, 37)
+        Me.typeLabel.Location = New System.Drawing.Point(3, 37)
         Me.typeLabel.Name = "typeLabel"
         Me.typeLabel.Size = New System.Drawing.Size(44, 16)
         Me.typeLabel.TabIndex = 0
@@ -190,7 +170,7 @@ Partial Class customer
         '
         Me.businessRegNoLabel.AutoSize = True
         Me.businessRegNoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.businessRegNoLabel.Location = New System.Drawing.Point(-2, 64)
+        Me.businessRegNoLabel.Location = New System.Drawing.Point(3, 64)
         Me.businessRegNoLabel.Name = "businessRegNoLabel"
         Me.businessRegNoLabel.Size = New System.Drawing.Size(128, 16)
         Me.businessRegNoLabel.TabIndex = 0
@@ -200,7 +180,7 @@ Partial Class customer
         '
         Me.vatLabel.AutoSize = True
         Me.vatLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.vatLabel.Location = New System.Drawing.Point(-1, 94)
+        Me.vatLabel.Location = New System.Drawing.Point(4, 94)
         Me.vatLabel.Name = "vatLabel"
         Me.vatLabel.Size = New System.Drawing.Size(38, 16)
         Me.vatLabel.TabIndex = 0
@@ -210,7 +190,7 @@ Partial Class customer
         '
         Me.gramasewaWasamLable.AutoSize = True
         Me.gramasewaWasamLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gramasewaWasamLable.Location = New System.Drawing.Point(0, 123)
+        Me.gramasewaWasamLable.Location = New System.Drawing.Point(5, 123)
         Me.gramasewaWasamLable.Name = "gramasewaWasamLable"
         Me.gramasewaWasamLable.Size = New System.Drawing.Size(155, 16)
         Me.gramasewaWasamLable.TabIndex = 0
@@ -219,7 +199,7 @@ Partial Class customer
         'lastNameTextBox
         '
         Me.lastNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameTextBox.Location = New System.Drawing.Point(508, 6)
+        Me.lastNameTextBox.Location = New System.Drawing.Point(514, 71)
         Me.lastNameTextBox.Name = "lastNameTextBox"
         Me.lastNameTextBox.Size = New System.Drawing.Size(213, 22)
         Me.lastNameTextBox.TabIndex = 1
@@ -227,7 +207,7 @@ Partial Class customer
         'otherNameTextBox
         '
         Me.otherNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.otherNameTextBox.Location = New System.Drawing.Point(152, 35)
+        Me.otherNameTextBox.Location = New System.Drawing.Point(158, 100)
         Me.otherNameTextBox.Name = "otherNameTextBox"
         Me.otherNameTextBox.Size = New System.Drawing.Size(226, 22)
         Me.otherNameTextBox.TabIndex = 1
@@ -235,7 +215,7 @@ Partial Class customer
         'nicTextBox
         '
         Me.nicTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nicTextBox.Location = New System.Drawing.Point(152, 63)
+        Me.nicTextBox.Location = New System.Drawing.Point(158, 128)
         Me.nicTextBox.Name = "nicTextBox"
         Me.nicTextBox.Size = New System.Drawing.Size(226, 22)
         Me.nicTextBox.TabIndex = 1
@@ -284,7 +264,7 @@ Partial Class customer
         'mobileNoMaskedTextBox
         '
         Me.mobileNoMaskedTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mobileNoMaskedTextBox.Location = New System.Drawing.Point(132, 17)
+        Me.mobileNoMaskedTextBox.Location = New System.Drawing.Point(132, 23)
         Me.mobileNoMaskedTextBox.Name = "mobileNoMaskedTextBox"
         Me.mobileNoMaskedTextBox.Size = New System.Drawing.Size(166, 22)
         Me.mobileNoMaskedTextBox.TabIndex = 4
@@ -292,7 +272,7 @@ Partial Class customer
         'landLineNoMaskedTextBox
         '
         Me.landLineNoMaskedTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.landLineNoMaskedTextBox.Location = New System.Drawing.Point(132, 47)
+        Me.landLineNoMaskedTextBox.Location = New System.Drawing.Point(132, 53)
         Me.landLineNoMaskedTextBox.Name = "landLineNoMaskedTextBox"
         Me.landLineNoMaskedTextBox.Size = New System.Drawing.Size(166, 22)
         Me.landLineNoMaskedTextBox.TabIndex = 4
@@ -322,8 +302,8 @@ Partial Class customer
         Me.addressGroupBox.Controls.Add(Me.houseNoTextBox)
         Me.addressGroupBox.Controls.Add(Me.cityComboBox)
         Me.addressGroupBox.Controls.Add(Me.cityLabel)
-        Me.addressGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addressGroupBox.Location = New System.Drawing.Point(414, 128)
+        Me.addressGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addressGroupBox.Location = New System.Drawing.Point(420, 186)
         Me.addressGroupBox.Name = "addressGroupBox"
         Me.addressGroupBox.Size = New System.Drawing.Size(368, 119)
         Me.addressGroupBox.TabIndex = 6
@@ -336,8 +316,8 @@ Partial Class customer
         Me.contactDetailsGrpBox.Controls.Add(Me.mobileNoLabel)
         Me.contactDetailsGrpBox.Controls.Add(Me.landLineNoLabel)
         Me.contactDetailsGrpBox.Controls.Add(Me.landLineNoMaskedTextBox)
-        Me.contactDetailsGrpBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contactDetailsGrpBox.Location = New System.Drawing.Point(59, 130)
+        Me.contactDetailsGrpBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.contactDetailsGrpBox.Location = New System.Drawing.Point(65, 188)
         Me.contactDetailsGrpBox.Name = "contactDetailsGrpBox"
         Me.contactDetailsGrpBox.Size = New System.Drawing.Size(319, 92)
         Me.contactDetailsGrpBox.TabIndex = 7
@@ -354,19 +334,39 @@ Partial Class customer
         Me.otherGroupBox.Controls.Add(Me.businessRegNoTextBox)
         Me.otherGroupBox.Controls.Add(Me.vatTextBox)
         Me.otherGroupBox.Controls.Add(Me.gramasewaWasamTextBox)
-        Me.otherGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.otherGroupBox.Location = New System.Drawing.Point(59, 228)
+        Me.otherGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.otherGroupBox.Location = New System.Drawing.Point(65, 286)
         Me.otherGroupBox.Name = "otherGroupBox"
         Me.otherGroupBox.Size = New System.Drawing.Size(319, 155)
         Me.otherGroupBox.TabIndex = 8
         Me.otherGroupBox.TabStop = False
         Me.otherGroupBox.Text = "Other"
         '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(552, 409)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
+        Me.saveBtn.TabIndex = 2
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(674, 409)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
+        Me.clearBtn.TabIndex = 2
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
         'customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(801, 398)
+        Me.ClientSize = New System.Drawing.Size(801, 476)
         Me.Controls.Add(Me.otherGroupBox)
         Me.Controls.Add(Me.contactDetailsGrpBox)
         Me.Controls.Add(Me.addressGroupBox)
@@ -395,8 +395,6 @@ Partial Class customer
 
     Friend WithEvents firstNameLabel As Label
     Friend WithEvents firstNameTextBox As TextBox
-    Friend WithEvents saveBtn As Button
-    Friend WithEvents clearBtn As Button
     Friend WithEvents lastNameLable As Label
     Friend WithEvents otherNameLabel As Label
     Friend WithEvents nicLabel As Label
@@ -424,4 +422,6 @@ Partial Class customer
     Friend WithEvents addressGroupBox As GroupBox
     Friend WithEvents contactDetailsGrpBox As GroupBox
     Friend WithEvents otherGroupBox As GroupBox
+    Friend WithEvents saveBtn As Button
+    Friend WithEvents clearBtn As Button
 End Class

@@ -1,4 +1,4 @@
-﻿Public Class DivisionalSecretariat
+﻿Public Class divisionalSecretariat
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles cityLable.Click, divisionalSectxbox.Click
 
     End Sub
@@ -11,11 +11,11 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles savebtn.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
-    Private Sub Clear_Click(sender As Object, e As EventArgs) Handles clearbtn.Click
+    Private Sub Clear_Click(sender As Object, e As EventArgs) 
 
     End Sub
 End Class
