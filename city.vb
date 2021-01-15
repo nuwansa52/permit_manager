@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub SaveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+    Private Sub SaveBtn_Click(sender As Object, e As EventArgs) 
 
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class DivisionalSecretariat
+Partial Class divisionalSecretariat
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,9 +25,9 @@ Partial Class DivisionalSecretariat
         Me.cityLable = New System.Windows.Forms.Label()
         Me.divisionalSectxbox = New System.Windows.Forms.Label()
         Me.divisionalSecTextBox = New System.Windows.Forms.TextBox()
-        Me.savebtn = New System.Windows.Forms.Button()
-        Me.clearbtn = New System.Windows.Forms.Button()
         Me.cityComboBox = New System.Windows.Forms.ComboBox()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cityLable
@@ -58,26 +58,6 @@ Partial Class DivisionalSecretariat
         Me.divisionalSecTextBox.Size = New System.Drawing.Size(233, 22)
         Me.divisionalSecTextBox.TabIndex = 1
         '
-        'savebtn
-        '
-        Me.savebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.savebtn.Location = New System.Drawing.Point(271, 246)
-        Me.savebtn.Name = "savebtn"
-        Me.savebtn.Size = New System.Drawing.Size(85, 39)
-        Me.savebtn.TabIndex = 2
-        Me.savebtn.Text = "Save"
-        Me.savebtn.UseVisualStyleBackColor = True
-        '
-        'clearbtn
-        '
-        Me.clearbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearbtn.Location = New System.Drawing.Point(382, 246)
-        Me.clearbtn.Name = "clearbtn"
-        Me.clearbtn.Size = New System.Drawing.Size(81, 39)
-        Me.clearbtn.TabIndex = 2
-        Me.clearbtn.Text = "Clear"
-        Me.clearbtn.UseVisualStyleBackColor = True
-        '
         'cityComboBox
         '
         Me.cityComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -87,19 +67,39 @@ Partial Class DivisionalSecretariat
         Me.cityComboBox.Size = New System.Drawing.Size(233, 24)
         Me.cityComboBox.TabIndex = 3
         '
-        'DivisionalSecretariat
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(382, 198)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
+        Me.clearBtn.TabIndex = 4
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(260, 198)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
+        Me.saveBtn.TabIndex = 5
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
+        'divisionalSecretariat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(511, 316)
+        Me.ClientSize = New System.Drawing.Size(511, 275)
+        Me.Controls.Add(Me.clearBtn)
+        Me.Controls.Add(Me.saveBtn)
         Me.Controls.Add(Me.cityComboBox)
-        Me.Controls.Add(Me.clearbtn)
-        Me.Controls.Add(Me.savebtn)
         Me.Controls.Add(Me.divisionalSecTextBox)
         Me.Controls.Add(Me.divisionalSectxbox)
         Me.Controls.Add(Me.cityLable)
-        Me.Name = "DivisionalSecretariat"
-        Me.Text = "agOffice"
+        Me.Name = "divisionalSecretariat"
+        Me.Text = "Divisional Secretariat"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -108,7 +108,7 @@ Partial Class DivisionalSecretariat
     Friend WithEvents cityLable As Label
     Friend WithEvents divisionalSectxbox As Label
     Friend WithEvents divisionalSecTextBox As TextBox
-    Friend WithEvents savebtn As Button
-    Friend WithEvents clearbtn As Button
     Friend WithEvents cityComboBox As ComboBox
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class
