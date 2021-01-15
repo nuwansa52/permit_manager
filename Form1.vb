@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Form1
-    Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Nilu\DCBA - Project.accdb")
+    Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=permit_manager.accdb")
 
     Function dbConnect() As Boolean
 

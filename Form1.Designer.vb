@@ -35,12 +35,9 @@ Partial Class Form1
         Me.UserroleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserdepartmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SystemuserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me._DCBA___ProjectDataSet = New Permit_Issuens_Supporter._DCBA___ProjectDataSet()
-        Me.System_userTableAdapter = New Permit_Issuens_Supporter._DCBA___ProjectDataSetTableAdapters.system_userTableAdapter()
         Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SystemuserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._DCBA___ProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -128,16 +125,7 @@ Partial Class Form1
         'SystemuserBindingSource
         '
         Me.SystemuserBindingSource.DataMember = "system_user"
-        Me.SystemuserBindingSource.DataSource = Me._DCBA___ProjectDataSet
         '
-        '_DCBA___ProjectDataSet
-        '
-        Me._DCBA___ProjectDataSet.DataSetName = "_DCBA___ProjectDataSet"
-        Me._DCBA___ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'System_userTableAdapter
-        '
-        Me.System_userTableAdapter.ClearBeforeFill = True
         '
         'Button4
         '
@@ -163,7 +151,6 @@ Partial Class Form1
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SystemuserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._DCBA___ProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -173,9 +160,7 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents _DCBA___ProjectDataSet As _DCBA___ProjectDataSet
     Friend WithEvents SystemuserBindingSource As BindingSource
-    Friend WithEvents System_userTableAdapter As _DCBA___ProjectDataSetTableAdapters.system_userTableAdapter
     Friend WithEvents UseridDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserfnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

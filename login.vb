@@ -31,10 +31,7 @@ Public Class login
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
         userName.Text = ""
         password.Text = ""
-    End Sub
-
-    Private Sub cancel_Click(sender As Object, e As EventArgs)
-        Me.Close()
+        systemUser.Show()
     End Sub
 
 End Class
