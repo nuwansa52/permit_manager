@@ -23,7 +23,7 @@
         depatment.Show()
     End Sub
 
-    Private Sub PermitTypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MyBaseToolStripMenuItem.Click
+    Private Sub SystemUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SystemUserToolStripMenuItem.Click
         systemUser.Show()
     End Sub
 End Class

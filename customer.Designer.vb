@@ -53,16 +53,29 @@ Partial Class customer
         Me.otherGroupBox = New System.Windows.Forms.GroupBox()
         Me.saveBtn = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DivisionalSectretariatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.search = New System.Windows.Forms.Button()
         Me.addressGroupBox.SuspendLayout()
         Me.contactDetailsGrpBox.SuspendLayout()
         Me.otherGroupBox.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'firstNameLabel
         '
         Me.firstNameLabel.AutoSize = True
         Me.firstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameLabel.Location = New System.Drawing.Point(62, 74)
+        Me.firstNameLabel.Location = New System.Drawing.Point(71, 106)
         Me.firstNameLabel.Name = "firstNameLabel"
         Me.firstNameLabel.Size = New System.Drawing.Size(83, 16)
         Me.firstNameLabel.TabIndex = 0
@@ -71,7 +84,7 @@ Partial Class customer
         'firstNameTextBox
         '
         Me.firstNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameTextBox.Location = New System.Drawing.Point(158, 70)
+        Me.firstNameTextBox.Location = New System.Drawing.Point(167, 102)
         Me.firstNameTextBox.Name = "firstNameTextBox"
         Me.firstNameTextBox.Size = New System.Drawing.Size(226, 22)
         Me.firstNameTextBox.TabIndex = 1
@@ -80,7 +93,7 @@ Partial Class customer
         '
         Me.lastNameLable.AutoSize = True
         Me.lastNameLable.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameLable.Location = New System.Drawing.Point(426, 74)
+        Me.lastNameLable.Location = New System.Drawing.Point(430, 105)
         Me.lastNameLable.Name = "lastNameLable"
         Me.lastNameLable.Size = New System.Drawing.Size(82, 16)
         Me.lastNameLable.TabIndex = 0
@@ -90,7 +103,7 @@ Partial Class customer
         '
         Me.otherNameLabel.AutoSize = True
         Me.otherNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.otherNameLabel.Location = New System.Drawing.Point(62, 103)
+        Me.otherNameLabel.Location = New System.Drawing.Point(71, 135)
         Me.otherNameLabel.Name = "otherNameLabel"
         Me.otherNameLabel.Size = New System.Drawing.Size(90, 16)
         Me.otherNameLabel.TabIndex = 0
@@ -100,7 +113,7 @@ Partial Class customer
         '
         Me.nicLabel.AutoSize = True
         Me.nicLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nicLabel.Location = New System.Drawing.Point(62, 132)
+        Me.nicLabel.Location = New System.Drawing.Point(71, 54)
         Me.nicLabel.Name = "nicLabel"
         Me.nicLabel.Size = New System.Drawing.Size(33, 16)
         Me.nicLabel.TabIndex = 0
@@ -199,7 +212,7 @@ Partial Class customer
         'lastNameTextBox
         '
         Me.lastNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameTextBox.Location = New System.Drawing.Point(514, 71)
+        Me.lastNameTextBox.Location = New System.Drawing.Point(518, 102)
         Me.lastNameTextBox.Name = "lastNameTextBox"
         Me.lastNameTextBox.Size = New System.Drawing.Size(213, 22)
         Me.lastNameTextBox.TabIndex = 1
@@ -207,7 +220,7 @@ Partial Class customer
         'otherNameTextBox
         '
         Me.otherNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.otherNameTextBox.Location = New System.Drawing.Point(158, 100)
+        Me.otherNameTextBox.Location = New System.Drawing.Point(167, 132)
         Me.otherNameTextBox.Name = "otherNameTextBox"
         Me.otherNameTextBox.Size = New System.Drawing.Size(226, 22)
         Me.otherNameTextBox.TabIndex = 1
@@ -215,7 +228,7 @@ Partial Class customer
         'nicTextBox
         '
         Me.nicTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nicTextBox.Location = New System.Drawing.Point(158, 128)
+        Me.nicTextBox.Location = New System.Drawing.Point(167, 50)
         Me.nicTextBox.Name = "nicTextBox"
         Me.nicTextBox.Size = New System.Drawing.Size(226, 22)
         Me.nicTextBox.TabIndex = 1
@@ -362,11 +375,93 @@ Partial Class customer
         Me.clearBtn.Text = "Clear"
         Me.clearBtn.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(801, 24)
+        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.PermitTypeToolStripMenuItem})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'DistrictToolStripMenuItem
+        '
+        Me.DistrictToolStripMenuItem.Name = "DistrictToolStripMenuItem"
+        Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DistrictToolStripMenuItem.Text = "District"
+        '
+        'CityToolStripMenuItem
+        '
+        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
+        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CityToolStripMenuItem.Text = "City"
+        '
+        'CustomerToolStripMenuItem
+        '
+        Me.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem"
+        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CustomerToolStripMenuItem.Text = "System User"
+        '
+        'DivisionalSectretariatToolStripMenuItem
+        '
+        Me.DivisionalSectretariatToolStripMenuItem.Name = "DivisionalSectretariatToolStripMenuItem"
+        Me.DivisionalSectretariatToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DivisionalSectretariatToolStripMenuItem.Text = "Divisional Sectretariat"
+        '
+        'GramasewaWasamToolStripMenuItem
+        '
+        Me.GramasewaWasamToolStripMenuItem.Name = "GramasewaWasamToolStripMenuItem"
+        Me.GramasewaWasamToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.GramasewaWasamToolStripMenuItem.Text = "Gramasewa Wasam"
+        '
+        'DepartmentToolStripMenuItem
+        '
+        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DepartmentToolStripMenuItem.Text = "Department"
+        '
+        'PermitTypeToolStripMenuItem
+        '
+        Me.PermitTypeToolStripMenuItem.Name = "PermitTypeToolStripMenuItem"
+        Me.PermitTypeToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.PermitTypeToolStripMenuItem.Text = "Permit Type"
+        '
+        'search
+        '
+        Me.search.Location = New System.Drawing.Point(429, 51)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(75, 23)
+        Me.search.TabIndex = 25
+        Me.search.Text = "Search"
+        Me.search.UseVisualStyleBackColor = True
+        '
         'customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 476)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.otherGroupBox)
         Me.Controls.Add(Me.contactDetailsGrpBox)
         Me.Controls.Add(Me.addressGroupBox)
@@ -388,6 +483,8 @@ Partial Class customer
         Me.contactDetailsGrpBox.PerformLayout()
         Me.otherGroupBox.ResumeLayout(False)
         Me.otherGroupBox.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -424,4 +521,16 @@ Partial Class customer
     Friend WithEvents otherGroupBox As GroupBox
     Friend WithEvents saveBtn As Button
     Friend WithEvents clearBtn As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DistrictToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CityToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CustomerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DivisionalSectretariatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GramasewaWasamToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents search As Button
 End Class

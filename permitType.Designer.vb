@@ -24,8 +24,6 @@ Partial Class permitType
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,7 +32,12 @@ Partial Class permitType
         Me.DivisionalSectretariatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.permitTypeLabel = New System.Windows.Forms.Label()
+        Me.permitTypeTextBox = New System.Windows.Forms.TextBox()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.search = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,38 +46,26 @@ Partial Class permitType
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(467, 24)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.EditToolStripMenuItem, Me.SaveToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
-        Me.NewToolStripMenuItem.Text = "New"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.PermitTypeToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.SystemUserToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -115,17 +106,69 @@ Partial Class permitType
         Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.DepartmentToolStripMenuItem.Text = "Department"
         '
-        'PermitTypeToolStripMenuItem
+        'SystemUserToolStripMenuItem
         '
-        Me.PermitTypeToolStripMenuItem.Name = "PermitTypeToolStripMenuItem"
-        Me.PermitTypeToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.PermitTypeToolStripMenuItem.Text = "System User"
+        Me.SystemUserToolStripMenuItem.Name = "SystemUserToolStripMenuItem"
+        Me.SystemUserToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.SystemUserToolStripMenuItem.Text = "System User"
+        '
+        'permitTypeLabel
+        '
+        Me.permitTypeLabel.AutoSize = True
+        Me.permitTypeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitTypeLabel.Location = New System.Drawing.Point(25, 72)
+        Me.permitTypeLabel.Name = "permitTypeLabel"
+        Me.permitTypeLabel.Size = New System.Drawing.Size(96, 16)
+        Me.permitTypeLabel.TabIndex = 24
+        Me.permitTypeLabel.Text = "Permit Type "
+        '
+        'permitTypeTextBox
+        '
+        Me.permitTypeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitTypeTextBox.Location = New System.Drawing.Point(127, 72)
+        Me.permitTypeTextBox.Name = "permitTypeTextBox"
+        Me.permitTypeTextBox.Size = New System.Drawing.Size(184, 22)
+        Me.permitTypeTextBox.TabIndex = 25
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(324, 132)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
+        Me.clearBtn.TabIndex = 26
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(202, 132)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
+        Me.saveBtn.TabIndex = 27
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
+        'search
+        '
+        Me.search.Location = New System.Drawing.Point(339, 72)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(75, 23)
+        Me.search.TabIndex = 28
+        Me.search.Text = "Search"
+        Me.search.UseVisualStyleBackColor = True
         '
         'permitType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(467, 206)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.clearBtn)
+        Me.Controls.Add(Me.saveBtn)
+        Me.Controls.Add(Me.permitTypeTextBox)
+        Me.Controls.Add(Me.permitTypeLabel)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "permitType"
         Me.Text = "Permit Type"
@@ -138,8 +181,6 @@ Partial Class permitType
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DistrictToolStripMenuItem As ToolStripMenuItem
@@ -148,5 +189,10 @@ Partial Class permitType
     Friend WithEvents DivisionalSectretariatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GramasewaWasamToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents permitTypeLabel As Label
+    Friend WithEvents permitTypeTextBox As TextBox
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
+    Friend WithEvents search As Button
+    Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
 End Class

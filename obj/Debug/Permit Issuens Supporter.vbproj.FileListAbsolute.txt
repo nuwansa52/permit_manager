@@ -31,3 +31,25 @@ D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.vbpro
 D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.exe
 D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.xml
 D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.pdb
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbprojAssemblyReference.cache
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.divisionalSecretariat.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.city.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.customer.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.depatment.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.district.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.Form1.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.gramaSewaWasama.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.login.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.Resources.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.permitType.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.systemUser.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.GenerateResource.cache
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.CoreCompileInputs.cache
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.exe
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.xml
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.pdb
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.exe.config
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.exe
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.pdb
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.xml
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\permit_manager.accdb

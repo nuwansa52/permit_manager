@@ -40,8 +40,6 @@ Partial Class systemUser
         Me.saveBtn = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,6 +49,7 @@ Partial Class systemUser
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.search = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,7 +57,7 @@ Partial Class systemUser
         '
         Me.firstName.AutoSize = True
         Me.firstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstName.Location = New System.Drawing.Point(58, 134)
+        Me.firstName.Location = New System.Drawing.Point(75, 103)
         Me.firstName.Name = "firstName"
         Me.firstName.Size = New System.Drawing.Size(83, 16)
         Me.firstName.TabIndex = 0
@@ -68,7 +67,7 @@ Partial Class systemUser
         '
         Me.userName.AutoSize = True
         Me.userName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userName.Location = New System.Drawing.Point(55, 90)
+        Me.userName.Location = New System.Drawing.Point(72, 57)
         Me.userName.Name = "userName"
         Me.userName.Size = New System.Drawing.Size(86, 16)
         Me.userName.TabIndex = 1
@@ -78,7 +77,7 @@ Partial Class systemUser
         '
         Me.lastName.AutoSize = True
         Me.lastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastName.Location = New System.Drawing.Point(432, 135)
+        Me.lastName.Location = New System.Drawing.Point(425, 104)
         Me.lastName.Name = "lastName"
         Me.lastName.Size = New System.Drawing.Size(82, 16)
         Me.lastName.TabIndex = 2
@@ -88,7 +87,7 @@ Partial Class systemUser
         '
         Me.role.AutoSize = True
         Me.role.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.role.Location = New System.Drawing.Point(97, 227)
+        Me.role.Location = New System.Drawing.Point(117, 199)
         Me.role.Name = "role"
         Me.role.Size = New System.Drawing.Size(41, 16)
         Me.role.TabIndex = 3
@@ -98,17 +97,17 @@ Partial Class systemUser
         '
         Me.agOffice.AutoSize = True
         Me.agOffice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agOffice.Location = New System.Drawing.Point(65, 177)
+        Me.agOffice.Location = New System.Drawing.Point(1, 149)
         Me.agOffice.Name = "agOffice"
-        Me.agOffice.Size = New System.Drawing.Size(73, 16)
+        Me.agOffice.Size = New System.Drawing.Size(157, 16)
         Me.agOffice.TabIndex = 4
-        Me.agOffice.Text = "AG Office"
+        Me.agOffice.Text = "Divisional Secretariat"
         '
         'department
         '
         Me.department.AutoSize = True
         Me.department.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.department.Location = New System.Drawing.Point(426, 178)
+        Me.department.Location = New System.Drawing.Point(419, 147)
         Me.department.Name = "department"
         Me.department.Size = New System.Drawing.Size(88, 16)
         Me.department.TabIndex = 5
@@ -118,7 +117,7 @@ Partial Class systemUser
         '
         Me.password.AutoSize = True
         Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.password.Location = New System.Drawing.Point(438, 230)
+        Me.password.Location = New System.Drawing.Point(431, 199)
         Me.password.Name = "password"
         Me.password.Size = New System.Drawing.Size(76, 16)
         Me.password.TabIndex = 6
@@ -127,7 +126,7 @@ Partial Class systemUser
         'userNameInput
         '
         Me.userNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userNameInput.Location = New System.Drawing.Point(174, 89)
+        Me.userNameInput.Location = New System.Drawing.Point(186, 54)
         Me.userNameInput.Name = "userNameInput"
         Me.userNameInput.Size = New System.Drawing.Size(186, 22)
         Me.userNameInput.TabIndex = 8
@@ -135,7 +134,7 @@ Partial Class systemUser
         'firstNameInput
         '
         Me.firstNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameInput.Location = New System.Drawing.Point(174, 133)
+        Me.firstNameInput.Location = New System.Drawing.Point(186, 100)
         Me.firstNameInput.Name = "firstNameInput"
         Me.firstNameInput.Size = New System.Drawing.Size(186, 22)
         Me.firstNameInput.TabIndex = 9
@@ -143,7 +142,7 @@ Partial Class systemUser
         'lastNameInput
         '
         Me.lastNameInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameInput.Location = New System.Drawing.Point(550, 134)
+        Me.lastNameInput.Location = New System.Drawing.Point(527, 103)
         Me.lastNameInput.Name = "lastNameInput"
         Me.lastNameInput.Size = New System.Drawing.Size(186, 22)
         Me.lastNameInput.TabIndex = 12
@@ -151,7 +150,7 @@ Partial Class systemUser
         'passwordInput
         '
         Me.passwordInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passwordInput.Location = New System.Drawing.Point(550, 227)
+        Me.passwordInput.Location = New System.Drawing.Point(527, 196)
         Me.passwordInput.Name = "passwordInput"
         Me.passwordInput.Size = New System.Drawing.Size(186, 22)
         Me.passwordInput.TabIndex = 14
@@ -161,7 +160,7 @@ Partial Class systemUser
         Me.roleInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.roleInput.FormattingEnabled = True
         Me.roleInput.Items.AddRange(New Object() {"ROLE_ADMIN", "ROLE_USER", "ROLE_MANAGER", "ROLE_AUTH_OFFICER"})
-        Me.roleInput.Location = New System.Drawing.Point(174, 227)
+        Me.roleInput.Location = New System.Drawing.Point(186, 194)
         Me.roleInput.Name = "roleInput"
         Me.roleInput.Size = New System.Drawing.Size(186, 24)
         Me.roleInput.TabIndex = 17
@@ -170,7 +169,7 @@ Partial Class systemUser
         '
         Me.departmentInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.departmentInput.FormattingEnabled = True
-        Me.departmentInput.Location = New System.Drawing.Point(550, 177)
+        Me.departmentInput.Location = New System.Drawing.Point(527, 146)
         Me.departmentInput.Name = "departmentInput"
         Me.departmentInput.Size = New System.Drawing.Size(186, 24)
         Me.departmentInput.TabIndex = 18
@@ -179,7 +178,7 @@ Partial Class systemUser
         '
         Me.agOfficeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.agOfficeInput.FormattingEnabled = True
-        Me.agOfficeInput.Location = New System.Drawing.Point(174, 176)
+        Me.agOfficeInput.Location = New System.Drawing.Point(186, 143)
         Me.agOfficeInput.Name = "agOfficeInput"
         Me.agOfficeInput.Size = New System.Drawing.Size(186, 24)
         Me.agOfficeInput.TabIndex = 19
@@ -187,7 +186,7 @@ Partial Class systemUser
         'clearBtn
         '
         Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(672, 289)
+        Me.clearBtn.Location = New System.Drawing.Point(633, 262)
         Me.clearBtn.Name = "clearBtn"
         Me.clearBtn.Size = New System.Drawing.Size(90, 32)
         Me.clearBtn.TabIndex = 20
@@ -197,7 +196,7 @@ Partial Class systemUser
         'saveBtn
         '
         Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(550, 289)
+        Me.saveBtn.Location = New System.Drawing.Point(511, 262)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(90, 32)
         Me.saveBtn.TabIndex = 21
@@ -209,33 +208,21 @@ Partial Class systemUser
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(768, 24)
         Me.MenuStrip1.TabIndex = 22
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.EditToolStripMenuItem, Me.SaveToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.NewToolStripMenuItem.Text = "New"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ViewToolStripMenuItem
@@ -287,11 +274,21 @@ Partial Class systemUser
         Me.PermitTypeToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.PermitTypeToolStripMenuItem.Text = "Permit Type"
         '
+        'search
+        '
+        Me.search.Location = New System.Drawing.Point(428, 55)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(75, 23)
+        Me.search.TabIndex = 27
+        Me.search.Text = "Search"
+        Me.search.UseVisualStyleBackColor = True
+        '
         'systemUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 347)
+        Me.ClientSize = New System.Drawing.Size(768, 316)
+        Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
         Me.Controls.Add(Me.agOfficeInput)
@@ -337,8 +334,6 @@ Partial Class systemUser
     Friend WithEvents saveBtn As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DistrictToolStripMenuItem As ToolStripMenuItem
@@ -348,4 +343,5 @@ Partial Class systemUser
     Friend WithEvents GramasewaWasamToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents search As Button
 End Class
