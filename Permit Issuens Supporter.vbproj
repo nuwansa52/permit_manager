@@ -77,11 +77,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessDataBase.vb" />
+    <Compile Include="agOffice.Designer.vb">
+      <DependentUpon>agOffice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agOffice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="city.Designer.vb">
+      <DependentUpon>city.vb</DependentUpon>
+    </Compile>
+    <Compile Include="city.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer.Designer.vb">
+      <DependentUpon>customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depatment.Designer.vb">
+      <DependentUpon>depatment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="depatment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="district.Designer.vb">
+      <DependentUpon>district.vb</DependentUpon>
+    </Compile>
+    <Compile Include="district.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gramaSewaWasama.Designer.vb">
+      <DependentUpon>gramaSewaWasama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gramaSewaWasama.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
