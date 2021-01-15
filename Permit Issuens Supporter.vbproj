@@ -142,6 +142,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Permit Header.Designer.vb">
+      <DependentUpon>Permit Header.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permit Header.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="permitType.Designer.vb">
       <DependentUpon>permitType.vb</DependentUpon>
     </Compile>
@@ -185,6 +191,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permit Header.resx">
+      <DependentUpon>Permit Header.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="permitType.resx">
       <DependentUpon>permitType.vb</DependentUpon>
