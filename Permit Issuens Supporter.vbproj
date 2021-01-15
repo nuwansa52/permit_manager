@@ -77,10 +77,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessDataBase.vb" />
-    <Compile Include="agOffice.Designer.vb">
-      <DependentUpon>agOffice.vb</DependentUpon>
+    <Compile Include="DivisionalSecretariat.Designer.vb">
+      <DependentUpon>DivisionalSecretariat.vb</DependentUpon>
     </Compile>
-    <Compile Include="agOffice.vb">
+    <Compile Include="DivisionalSecretariat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="city.Designer.vb">
@@ -150,6 +150,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DivisionalSecretariat.resx">
+      <DependentUpon>DivisionalSecretariat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="city.resx">
+      <DependentUpon>city.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depatment.resx">
+      <DependentUpon>depatment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="district.resx">
+      <DependentUpon>district.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

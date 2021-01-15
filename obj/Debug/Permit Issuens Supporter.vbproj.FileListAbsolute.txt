@@ -12,3 +12,22 @@ D:\Projects\Visual Studeo\Permit Issuens Supporter\obj\Debug\Permit Issuens Supp
 D:\Projects\Visual Studeo\Permit Issuens Supporter\obj\Debug\Permit Issuens Supporter.pdb
 D:\Projects\Visual Studeo\Permit Issuens Supporter\obj\Debug\Permit_Issuens_Supporter.login.resources
 D:\Projects\Visual Studeo\Permit Issuens Supporter\obj\Debug\Permit_Issuens_Supporter.systemUser.resources
+D:\Project\Visual Studio\permit_manager\bin\Debug\Permit Issuens Supporter.exe.config
+D:\Project\Visual Studio\permit_manager\bin\Debug\Permit Issuens Supporter.exe
+D:\Project\Visual Studio\permit_manager\bin\Debug\Permit Issuens Supporter.pdb
+D:\Project\Visual Studio\permit_manager\bin\Debug\Permit Issuens Supporter.xml
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.vbprojAssemblyReference.cache
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.DivisionalSecretariat.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.city.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.customer.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.depatment.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.district.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.Form1.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.login.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.Resources.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit_Issuens_Supporter.systemUser.resources
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.GenerateResource.cache
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.CoreCompileInputs.cache
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.exe
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.xml
+D:\Project\Visual Studio\permit_manager\obj\Debug\Permit Issuens Supporter.pdb
