@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class city
+Partial Class treeType
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,56 +22,37 @@ Partial Class city
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.cityLabel = New System.Windows.Forms.Label()
-        Me.cityInput = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DivisionalSectretariatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CustomerToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IssuePermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.search = New System.Windows.Forms.Button()
+        Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.edit = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
         Me.saveBtn = New System.Windows.Forms.Button()
-        Me.district = New System.Windows.Forms.Label()
-        Me.districtInput = New System.Windows.Forms.ComboBox()
+        Me.search = New System.Windows.Forms.Button()
+        Me.treeTypeInput = New System.Windows.Forms.TextBox()
+        Me.TreeTypeLabel = New System.Windows.Forms.Label()
+        Me.PermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomerToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IssuePermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'cityLabel
-        '
-        Me.cityLabel.AutoSize = True
-        Me.cityLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cityLabel.Location = New System.Drawing.Point(27, 63)
-        Me.cityLabel.Name = "cityLabel"
-        Me.cityLabel.Size = New System.Drawing.Size(34, 16)
-        Me.cityLabel.TabIndex = 0
-        Me.cityLabel.Text = "City"
-        '
-        'cityInput
-        '
-        Me.cityInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cityInput.Location = New System.Drawing.Point(100, 60)
-        Me.cityInput.Name = "cityInput"
-        Me.cityInput.Size = New System.Drawing.Size(233, 22)
-        Me.cityInput.TabIndex = 3
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PermitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(450, 24)
-        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.Size = New System.Drawing.Size(472, 24)
+        Me.MenuStrip1.TabIndex = 24
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
@@ -89,7 +70,7 @@ Partial Class city
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.PermitTypeToolStripMenuItem, Me.SystemUserToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.SystemUserToolStripMenuItem, Me.PermitTypeToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -99,6 +80,12 @@ Partial Class city
         Me.DistrictToolStripMenuItem.Name = "DistrictToolStripMenuItem"
         Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.DistrictToolStripMenuItem.Text = "District"
+        '
+        'CityToolStripMenuItem
+        '
+        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
+        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CityToolStripMenuItem.Text = "City"
         '
         'CustomerToolStripMenuItem
         '
@@ -124,17 +111,74 @@ Partial Class city
         Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.DepartmentToolStripMenuItem.Text = "Department"
         '
+        'SystemUserToolStripMenuItem
+        '
+        Me.SystemUserToolStripMenuItem.Name = "SystemUserToolStripMenuItem"
+        Me.SystemUserToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.SystemUserToolStripMenuItem.Text = "System User"
+        '
         'PermitTypeToolStripMenuItem
         '
         Me.PermitTypeToolStripMenuItem.Name = "PermitTypeToolStripMenuItem"
         Me.PermitTypeToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.PermitTypeToolStripMenuItem.Text = "Permit Type"
         '
-        'SystemUserToolStripMenuItem
+        'edit
         '
-        Me.SystemUserToolStripMenuItem.Name = "SystemUserToolStripMenuItem"
-        Me.SystemUserToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.SystemUserToolStripMenuItem.Text = "System User"
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(244, 132)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 40
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(354, 132)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 38
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(134, 132)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 39
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
+        'search
+        '
+        Me.search.Location = New System.Drawing.Point(369, 61)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(75, 23)
+        Me.search.TabIndex = 37
+        Me.search.Text = "Search"
+        Me.search.UseVisualStyleBackColor = True
+        '
+        'treeTypeInput
+        '
+        Me.treeTypeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.treeTypeInput.Location = New System.Drawing.Point(118, 61)
+        Me.treeTypeInput.Name = "treeTypeInput"
+        Me.treeTypeInput.Size = New System.Drawing.Size(233, 22)
+        Me.treeTypeInput.TabIndex = 36
+        '
+        'TreeTypeLabel
+        '
+        Me.TreeTypeLabel.AutoSize = True
+        Me.TreeTypeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TreeTypeLabel.Location = New System.Drawing.Point(12, 64)
+        Me.TreeTypeLabel.Name = "TreeTypeLabel"
+        Me.TreeTypeLabel.Size = New System.Drawing.Size(81, 16)
+        Me.TreeTypeLabel.TabIndex = 35
+        Me.TreeTypeLabel.Text = "Tree Type"
         '
         'PermitToolStripMenuItem
         '
@@ -155,80 +199,20 @@ Partial Class city
         Me.IssuePermitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.IssuePermitToolStripMenuItem.Text = "Issue Permit"
         '
-        'search
-        '
-        Me.search.Location = New System.Drawing.Point(340, 60)
-        Me.search.Name = "search"
-        Me.search.Size = New System.Drawing.Size(75, 23)
-        Me.search.TabIndex = 24
-        Me.search.Text = "Search"
-        Me.search.UseVisualStyleBackColor = True
-        '
-        'edit
-        '
-        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.edit.Location = New System.Drawing.Point(216, 163)
-        Me.edit.Name = "edit"
-        Me.edit.Size = New System.Drawing.Size(90, 27)
-        Me.edit.TabIndex = 31
-        Me.edit.Text = "Edit"
-        Me.edit.UseVisualStyleBackColor = True
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(325, 163)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
-        Me.clearBtn.TabIndex = 29
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(106, 163)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
-        Me.saveBtn.TabIndex = 30
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
-        '
-        'district
-        '
-        Me.district.AutoSize = True
-        Me.district.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.district.Location = New System.Drawing.Point(27, 108)
-        Me.district.Name = "district"
-        Me.district.Size = New System.Drawing.Size(59, 17)
-        Me.district.TabIndex = 32
-        Me.district.Text = "District"
-        '
-        'districtInput
-        '
-        Me.districtInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.districtInput.FormattingEnabled = True
-        Me.districtInput.Location = New System.Drawing.Point(100, 105)
-        Me.districtInput.Name = "districtInput"
-        Me.districtInput.Size = New System.Drawing.Size(233, 24)
-        Me.districtInput.TabIndex = 33
-        '
-        'city
+        'treeType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(450, 211)
-        Me.Controls.Add(Me.districtInput)
-        Me.Controls.Add(Me.district)
+        Me.ClientSize = New System.Drawing.Size(472, 200)
         Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
         Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.treeTypeInput)
+        Me.Controls.Add(Me.TreeTypeLabel)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.cityInput)
-        Me.Controls.Add(Me.cityLabel)
-        Me.Name = "city"
-        Me.Text = "City"
+        Me.Name = "treeType"
+        Me.Text = "Tree Type"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -236,25 +220,24 @@ Partial Class city
 
     End Sub
 
-    Friend WithEvents cityLabel As Label
-    Friend WithEvents cityInput As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DistrictToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CityToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DivisionalSectretariatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GramasewaWasamToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents search As Button
+    Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents edit As Button
     Friend WithEvents clearBtn As Button
     Friend WithEvents saveBtn As Button
-    Friend WithEvents district As Label
-    Friend WithEvents districtInput As ComboBox
+    Friend WithEvents search As Button
+    Friend WithEvents treeTypeInput As TextBox
+    Friend WithEvents TreeTypeLabel As Label
     Friend WithEvents PermitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomerToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents IssuePermitToolStripMenuItem As ToolStripMenuItem

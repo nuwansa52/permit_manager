@@ -49,6 +49,9 @@ Partial Class systemUser
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomerToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IssuePermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
         Me.edit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
@@ -160,7 +163,7 @@ Partial Class systemUser
         '
         Me.roleInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.roleInput.FormattingEnabled = True
-        Me.roleInput.Items.AddRange(New Object() {"ROLE_ADMIN", "ROLE_USER", "ROLE_MANAGER", "ROLE_AUTH_OFFICER"})
+        Me.roleInput.Items.AddRange(New Object() {"ROLE_ADMIN", "ROLE_USER", "ROLE_MANAGER", "ROLE_AUTH_OFFICER", "ROLE_FINANCE"})
         Me.roleInput.Location = New System.Drawing.Point(186, 194)
         Me.roleInput.Name = "roleInput"
         Me.roleInput.Size = New System.Drawing.Size(186, 24)
@@ -206,7 +209,7 @@ Partial Class systemUser
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PermitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(768, 24)
@@ -274,6 +277,25 @@ Partial Class systemUser
         Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
         Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.DepartmentToolStripMenuItem.Text = "Department"
+        '
+        'PermitToolStripMenuItem
+        '
+        Me.PermitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerToolStripMenuItem1, Me.IssuePermitToolStripMenuItem})
+        Me.PermitToolStripMenuItem.Name = "PermitToolStripMenuItem"
+        Me.PermitToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.PermitToolStripMenuItem.Text = "Permit"
+        '
+        'CustomerToolStripMenuItem1
+        '
+        Me.CustomerToolStripMenuItem1.Name = "CustomerToolStripMenuItem1"
+        Me.CustomerToolStripMenuItem1.Size = New System.Drawing.Size(138, 22)
+        Me.CustomerToolStripMenuItem1.Text = "Customer"
+        '
+        'IssuePermitToolStripMenuItem
+        '
+        Me.IssuePermitToolStripMenuItem.Name = "IssuePermitToolStripMenuItem"
+        Me.IssuePermitToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.IssuePermitToolStripMenuItem.Text = "Issue Permit"
         '
         'search
         '
@@ -357,4 +379,7 @@ Partial Class systemUser
     Friend WithEvents search As Button
     Friend WithEvents edit As Button
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CustomerToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents IssuePermitToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -148,4 +148,11 @@ Public Class permitType
         systemUser.Show()
     End Sub
 
+    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
+        customer.Show()
+    End Sub
+
+    Private Sub IssuePermitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssuePermitToolStripMenuItem.Click
+        permitHeader.Show()
+    End Sub
 End Class

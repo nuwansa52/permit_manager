@@ -7,7 +7,7 @@ Public Class login
         Dim dbConn = New AccessDataBase()
         con = dbConn.dbConnect()
 
-        Dim cmd As OleDbCommand = New OleDbCommand("SELECT [password], [user_name] FROM [system_user] WHERE user_name = @userName", con)
+        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [system_user] WHERE user_name = @userName", con)
         cmd.Parameters.Add("@userName", userName.Text)
 
         Dim sdr As OleDbDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
@@ -15,8 +15,13 @@ Public Class login
         If sdr.Read() Then
 
             If sdr("password").ToString = password.Text Then
+                Common.userId = sdr("user_id")
+                Common.userName = sdr("user_fname") & " " & sdr("user_lname")
+                Common.userRole = sdr("user_role")
+                Common.agOfficeId = sdr("ag_office_id")
+
                 Me.Hide()
-                Form1.Show()
+                permitHeader.Show()
             Else
                 MessageBox.Show("Incorrect Passwort!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
@@ -28,12 +33,9 @@ Public Class login
     End Sub
 
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
-        userName.Text = ""
-        password.Text = ""
-        systemUser.Show()
+        Dim common As New Common()
+        common.clearData(Me)
+        fileUpload.Show()
     End Sub
 
-    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

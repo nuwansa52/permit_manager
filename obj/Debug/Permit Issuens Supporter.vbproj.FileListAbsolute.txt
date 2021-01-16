@@ -53,7 +53,10 @@ D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.exe
 D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.pdb
 D:\Projects\Visual Studeo\permit_manager\bin\Debug\Permit Issuens Supporter.xml
 D:\Projects\Visual Studeo\permit_manager\bin\Debug\permit_manager.accdb
-D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.Permit_Header.resources
 D:\Projects\Visual Studeo\permit_manager\bin\Debug\BouncyCastle.Crypto.dll
 D:\Projects\Visual Studeo\permit_manager\bin\Debug\BouncyCastle.Crypto.xml
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.CopyComplete
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.treeType.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.permitHeader.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.fileUpload.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.fileViewer.resources

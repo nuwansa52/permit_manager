@@ -26,11 +26,11 @@ Public Class systemUser
                 Dim sdr1 As OleDbDataReader = cmd1.ExecuteReader(CommandBehavior.CloseConnection)
                 Dim comboSource1 As New Dictionary(Of Integer, String)()
 
-                While sdr.Read()
-                    comboSource.Add(sdr("department_id").ToString, sdr("description").ToString)
+                While sdr1.Read()
+                    comboSource1.Add(sdr1("department_id").ToString, sdr1("description").ToString)
                 End While
 
-                departmentInput.DataSource = New BindingSource(comboSource, Nothing)
+                departmentInput.DataSource = New BindingSource(comboSource1, Nothing)
                 departmentInput.DisplayMember = "Value"
                 departmentInput.ValueMember = "Key"
 
@@ -211,4 +211,11 @@ Public Class systemUser
         department.Show()
     End Sub
 
+    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
+        customer.Show()
+    End Sub
+
+    Private Sub IssuePermitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssuePermitToolStripMenuItem.Click
+        permitHeader.Show()
+    End Sub
 End Class

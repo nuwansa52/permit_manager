@@ -39,6 +39,9 @@ Partial Class district
         Me.edit = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
         Me.saveBtn = New System.Windows.Forms.Button()
+        Me.PermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomerToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IssuePermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,7 +65,7 @@ Partial Class district
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PermitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(458, 24)
@@ -170,6 +173,25 @@ Partial Class district
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
+        'PermitToolStripMenuItem
+        '
+        Me.PermitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerToolStripMenuItem1, Me.IssuePermitToolStripMenuItem})
+        Me.PermitToolStripMenuItem.Name = "PermitToolStripMenuItem"
+        Me.PermitToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.PermitToolStripMenuItem.Text = "Permit"
+        '
+        'CustomerToolStripMenuItem1
+        '
+        Me.CustomerToolStripMenuItem1.Name = "CustomerToolStripMenuItem1"
+        Me.CustomerToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.CustomerToolStripMenuItem1.Text = "Customer"
+        '
+        'IssuePermitToolStripMenuItem
+        '
+        Me.IssuePermitToolStripMenuItem.Name = "IssuePermitToolStripMenuItem"
+        Me.IssuePermitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IssuePermitToolStripMenuItem.Text = "Issue Permit"
+        '
         'district
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,4 +230,7 @@ Partial Class district
     Friend WithEvents edit As Button
     Friend WithEvents clearBtn As Button
     Friend WithEvents saveBtn As Button
+    Friend WithEvents PermitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CustomerToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents IssuePermitToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -4,7 +4,7 @@ Public Class gramaSewaWasama
     Dim dbConn = New AccessDataBase()
     Dim con As New OleDb.OleDbConnection
 
-    Private Sub city_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub gramaSewaWasama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con = dbConn.dbConnect()
         Try
             If con.State = ConnectionState.Open Then
@@ -173,8 +173,11 @@ Public Class gramaSewaWasama
         permitType.Show()
     End Sub
 
-    Private Sub gramaSewaWasama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
+        customer.Show()
     End Sub
 
+    Private Sub IssuePermitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssuePermitToolStripMenuItem.Click
+        permitHeader.Show()
+    End Sub
 End Class

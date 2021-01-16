@@ -112,6 +112,18 @@
     <Compile Include="district.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="File Upload.Designer.vb">
+      <DependentUpon>File Upload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="File Upload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File Viewer.Designer.vb">
+      <DependentUpon>File Viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="File Viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,12 @@
     <Compile Include="systemUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tree Type.Designer.vb">
+      <DependentUpon>Tree Type.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tree Type.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DivisionalSecretariat.resx">
@@ -181,6 +199,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="district.resx">
       <DependentUpon>district.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File Upload.resx">
+      <DependentUpon>File Upload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File Viewer.resx">
+      <DependentUpon>File Viewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -205,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="systemUser.resx">
       <DependentUpon>systemUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree Type.resx">
+      <DependentUpon>Tree Type.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

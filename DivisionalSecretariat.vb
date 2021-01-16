@@ -4,17 +4,17 @@ Public Class divisionalSecretariat
     Dim dbConn = New AccessDataBase()
     Dim con As New OleDb.OleDbConnection
 
-    Private Sub city_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub divisionalSecretariat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con = dbConn.dbConnect()
         Try
             If con.State = ConnectionState.Open Then
                 'City Load
-                Dim cmd As OleDbCommand = New OleDbCommand("SELECT [district_id], [city_name] FROM [city]", con)
+                Dim cmd As OleDbCommand = New OleDbCommand("SELECT [city_id], [city_name] FROM [city]", con)
                 Dim sdr As OleDbDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
                 Dim comboSource As New Dictionary(Of Integer, String)()
 
                 While sdr.Read()
-                    comboSource.Add(sdr("district_id").ToString, sdr("city_name").ToString)
+                    comboSource.Add(sdr("city_id").ToString, sdr("city_name").ToString)
                 End While
 
                 cityInput.DataSource = New BindingSource(comboSource, Nothing)
@@ -175,4 +175,11 @@ Public Class divisionalSecretariat
         permitType.Show()
     End Sub
 
+    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
+        customer.Show()
+    End Sub
+
+    Private Sub IssuePermitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssuePermitToolStripMenuItem.Click
+        permitHeader.Show()
+    End Sub
 End Class
