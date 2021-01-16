@@ -11,7 +11,7 @@ Partial Public Class fileUpload
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles DOC1UPL.Click
         Dim filePath As String
         Dim newFilePath As String
 
@@ -35,11 +35,11 @@ Partial Public Class fileUpload
     End Sub
 
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles DOC2ViEW.Click
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles DOC1ViEW.Click
         Dim pdfDoc As String = "D:\michelle\e-iceblue\Spire.Office.pdf"
 
 
@@ -49,36 +49,28 @@ Partial Public Class fileUpload
 
     End Sub
 
-    Function trackUpload(path, headerId)
+    Function trackUpload(path, headerId, code)
 
         con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+        Dim sql As String = "INSERT INTO [upload_document] ([per_id], [doc_code], [doc_saved_path], [doc_uploaded_user], [doc_uploaded_date])
+                                VALUES(@perId, @docCode, @docSavedPath, @docUploadedUser, @docUploadedDate)"
 
-        If sdr.Read() Then
-            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            Dim sql As String = "INSERT INTO [system_user] ([user_name], [user_fname], [user_lname], [user_role], [ag_office_id], [department_id], [password])
-                                VALUES(@userName, @userfName, @userlName, @userRole, @agOfficeId, @departmentId, @password)"
+        If con.State = ConnectionState.Open Then
+            Using sqlCom = New OleDbCommand(sql, con)
 
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
-                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
-                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
-                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
-                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+                sqlCom.Parameters.Add("@perId", OleDbType.VarChar).Value = permitHeader.permitId.Text
+                sqlCom.Parameters.Add("@docCode", OleDbType.VarChar).Value = code
+                sqlCom.Parameters.Add("@docSavedPath", OleDbType.VarChar).Value = path
+                sqlCom.Parameters.Add("@docUploadedUser", OleDbType.VarChar).Value = Common.userId
+                sqlCom.Parameters.Add("@docUploadedDate", OleDbType.Numeric).Value = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")
 
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
-                End Using
-            Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
+                Dim icount As Integer = sqlCom.ExecuteNonQuery
+
+                If icount = 1 Then
+                    MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                End If
+            End Using
         End If
 
     End Function

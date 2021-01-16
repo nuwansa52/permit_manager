@@ -54,10 +54,12 @@ Partial Class permitHeader
         Me.paymentAmountInput = New System.Windows.Forms.TextBox()
         Me.paymentAmount = New System.Windows.Forms.Label()
         Me.permitDetailsGroup = New System.Windows.Forms.GroupBox()
+        Me.searchPermit = New System.Windows.Forms.Button()
         Me.transpoertDetailsGroup = New System.Windows.Forms.GroupBox()
         Me.paymentDetailsGroup = New System.Windows.Forms.GroupBox()
         Me.otherGroup = New System.Windows.Forms.GroupBox()
-        Me.searchPermit = New System.Windows.Forms.Button()
+        Me.typeOfTreeComboBox = New System.Windows.Forms.ComboBox()
+        Me.typeOfTree = New System.Windows.Forms.Label()
         Me.update = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
         Me.saveBtn = New System.Windows.Forms.Button()
@@ -72,15 +74,17 @@ Partial Class permitHeader
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.typeOfTree = New System.Windows.Forms.Label()
-        Me.typeOfTreeComboBox = New System.Windows.Forms.ComboBox()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.customerNameInput = New System.Windows.Forms.TextBox()
         Me.customerName = New System.Windows.Forms.Label()
         Me.customerId = New System.Windows.Forms.Label()
+        Me.upload = New System.Windows.Forms.Button()
+        Me.permitId = New System.Windows.Forms.Label()
         Me.permitDetailsGroup.SuspendLayout()
         Me.transpoertDetailsGroup.SuspendLayout()
         Me.paymentDetailsGroup.SuspendLayout()
@@ -104,7 +108,7 @@ Partial Class permitHeader
         Me.permitTypeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.permitTypeInput.FormattingEnabled = True
         Me.permitTypeInput.Location = New System.Drawing.Point(178, 65)
-        Me.permitTypeInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.permitTypeInput.Margin = New System.Windows.Forms.Padding(4)
         Me.permitTypeInput.Name = "permitTypeInput"
         Me.permitTypeInput.Size = New System.Drawing.Size(204, 24)
         Me.permitTypeInput.TabIndex = 1
@@ -124,7 +128,7 @@ Partial Class permitHeader
         '
         Me.applicationNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.applicationNumberInput.Location = New System.Drawing.Point(178, 29)
-        Me.applicationNumberInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.applicationNumberInput.Margin = New System.Windows.Forms.Padding(4)
         Me.applicationNumberInput.Name = "applicationNumberInput"
         Me.applicationNumberInput.Size = New System.Drawing.Size(204, 23)
         Me.applicationNumberInput.TabIndex = 3
@@ -155,7 +159,7 @@ Partial Class permitHeader
         '
         Me.transferFromInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.transferFromInput.Location = New System.Drawing.Point(178, 60)
-        Me.transferFromInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.transferFromInput.Margin = New System.Windows.Forms.Padding(4)
         Me.transferFromInput.Name = "transferFromInput"
         Me.transferFromInput.Size = New System.Drawing.Size(204, 23)
         Me.transferFromInput.TabIndex = 7
@@ -164,7 +168,7 @@ Partial Class permitHeader
         '
         Me.transportToInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.transportToInput.Location = New System.Drawing.Point(178, 95)
-        Me.transportToInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.transportToInput.Margin = New System.Windows.Forms.Padding(4)
         Me.transportToInput.Name = "transportToInput"
         Me.transportToInput.Size = New System.Drawing.Size(204, 23)
         Me.transportToInput.TabIndex = 8
@@ -195,7 +199,7 @@ Partial Class permitHeader
         '
         Me.dateTimePickerFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateTimePickerFrom.Location = New System.Drawing.Point(178, 131)
-        Me.dateTimePickerFrom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dateTimePickerFrom.Margin = New System.Windows.Forms.Padding(4)
         Me.dateTimePickerFrom.Name = "dateTimePickerFrom"
         Me.dateTimePickerFrom.Size = New System.Drawing.Size(204, 23)
         Me.dateTimePickerFrom.TabIndex = 11
@@ -204,7 +208,7 @@ Partial Class permitHeader
         '
         Me.dateTimePickerTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateTimePickerTo.Location = New System.Drawing.Point(178, 169)
-        Me.dateTimePickerTo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dateTimePickerTo.Margin = New System.Windows.Forms.Padding(4)
         Me.dateTimePickerTo.Name = "dateTimePickerTo"
         Me.dateTimePickerTo.Size = New System.Drawing.Size(204, 23)
         Me.dateTimePickerTo.TabIndex = 12
@@ -224,7 +228,7 @@ Partial Class permitHeader
         '
         Me.vehicleNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.vehicleNumberInput.Location = New System.Drawing.Point(178, 25)
-        Me.vehicleNumberInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.vehicleNumberInput.Margin = New System.Windows.Forms.Padding(4)
         Me.vehicleNumberInput.Name = "vehicleNumberInput"
         Me.vehicleNumberInput.Size = New System.Drawing.Size(204, 23)
         Me.vehicleNumberInput.TabIndex = 14
@@ -233,7 +237,7 @@ Partial Class permitHeader
         '
         Me.paymentVoucherInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.paymentVoucherInput.Location = New System.Drawing.Point(167, 29)
-        Me.paymentVoucherInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.paymentVoucherInput.Margin = New System.Windows.Forms.Padding(4)
         Me.paymentVoucherInput.Name = "paymentVoucherInput"
         Me.paymentVoucherInput.Size = New System.Drawing.Size(204, 23)
         Me.paymentVoucherInput.TabIndex = 16
@@ -253,7 +257,7 @@ Partial Class permitHeader
         '
         Me.permitNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.permitNumberInput.Location = New System.Drawing.Point(178, 100)
-        Me.permitNumberInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.permitNumberInput.Margin = New System.Windows.Forms.Padding(4)
         Me.permitNumberInput.Name = "permitNumberInput"
         Me.permitNumberInput.Size = New System.Drawing.Size(204, 23)
         Me.permitNumberInput.TabIndex = 18
@@ -273,7 +277,7 @@ Partial Class permitHeader
         '
         Me.customerNicInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.customerNicInput.Location = New System.Drawing.Point(170, 57)
-        Me.customerNicInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.customerNicInput.Margin = New System.Windows.Forms.Padding(4)
         Me.customerNicInput.Name = "customerNicInput"
         Me.customerNicInput.Size = New System.Drawing.Size(148, 23)
         Me.customerNicInput.TabIndex = 20
@@ -293,7 +297,7 @@ Partial Class permitHeader
         '
         Me.customerSearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.customerSearchBtn.Location = New System.Drawing.Point(348, 56)
-        Me.customerSearchBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.customerSearchBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.customerSearchBtn.Name = "customerSearchBtn"
         Me.customerSearchBtn.Size = New System.Drawing.Size(98, 28)
         Me.customerSearchBtn.TabIndex = 21
@@ -304,7 +308,7 @@ Partial Class permitHeader
         '
         Me.landNoInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.landNoInput.Location = New System.Drawing.Point(178, 133)
-        Me.landNoInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.landNoInput.Margin = New System.Windows.Forms.Padding(4)
         Me.landNoInput.Name = "landNoInput"
         Me.landNoInput.Size = New System.Drawing.Size(204, 23)
         Me.landNoInput.TabIndex = 23
@@ -324,7 +328,7 @@ Partial Class permitHeader
         '
         Me.remarkInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.remarkInput.Location = New System.Drawing.Point(167, 98)
-        Me.remarkInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.remarkInput.Margin = New System.Windows.Forms.Padding(4)
         Me.remarkInput.Multiline = True
         Me.remarkInput.Name = "remarkInput"
         Me.remarkInput.Size = New System.Drawing.Size(263, 71)
@@ -345,7 +349,7 @@ Partial Class permitHeader
         '
         Me.cuttingPersonInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cuttingPersonInput.Location = New System.Drawing.Point(167, 27)
-        Me.cuttingPersonInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cuttingPersonInput.Margin = New System.Windows.Forms.Padding(4)
         Me.cuttingPersonInput.Name = "cuttingPersonInput"
         Me.cuttingPersonInput.Size = New System.Drawing.Size(230, 23)
         Me.cuttingPersonInput.TabIndex = 27
@@ -365,7 +369,7 @@ Partial Class permitHeader
         '
         Me.receiptNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.receiptNumberInput.Location = New System.Drawing.Point(167, 100)
-        Me.receiptNumberInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.receiptNumberInput.Margin = New System.Windows.Forms.Padding(4)
         Me.receiptNumberInput.Name = "receiptNumberInput"
         Me.receiptNumberInput.Size = New System.Drawing.Size(204, 23)
         Me.receiptNumberInput.TabIndex = 29
@@ -385,7 +389,7 @@ Partial Class permitHeader
         '
         Me.paymentAmountInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.paymentAmountInput.Location = New System.Drawing.Point(167, 65)
-        Me.paymentAmountInput.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.paymentAmountInput.Margin = New System.Windows.Forms.Padding(4)
         Me.paymentAmountInput.Name = "paymentAmountInput"
         Me.paymentAmountInput.Size = New System.Drawing.Size(204, 23)
         Me.paymentAmountInput.TabIndex = 31
@@ -419,6 +423,17 @@ Partial Class permitHeader
         Me.permitDetailsGroup.TabIndex = 32
         Me.permitDetailsGroup.TabStop = False
         Me.permitDetailsGroup.Text = "Permit Details"
+        '
+        'searchPermit
+        '
+        Me.searchPermit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchPermit.Location = New System.Drawing.Point(390, 27)
+        Me.searchPermit.Margin = New System.Windows.Forms.Padding(4)
+        Me.searchPermit.Name = "searchPermit"
+        Me.searchPermit.Size = New System.Drawing.Size(77, 28)
+        Me.searchPermit.TabIndex = 35
+        Me.searchPermit.Text = "Search"
+        Me.searchPermit.UseVisualStyleBackColor = True
         '
         'transpoertDetailsGroup
         '
@@ -472,16 +487,26 @@ Partial Class permitHeader
         Me.otherGroup.TabStop = False
         Me.otherGroup.Text = "Other"
         '
-        'searchPermit
+        'typeOfTreeComboBox
         '
-        Me.searchPermit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchPermit.Location = New System.Drawing.Point(390, 27)
-        Me.searchPermit.Margin = New System.Windows.Forms.Padding(4)
-        Me.searchPermit.Name = "searchPermit"
-        Me.searchPermit.Size = New System.Drawing.Size(77, 28)
-        Me.searchPermit.TabIndex = 35
-        Me.searchPermit.Text = "Search"
-        Me.searchPermit.UseVisualStyleBackColor = True
+        Me.typeOfTreeComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.typeOfTreeComboBox.FormattingEnabled = True
+        Me.typeOfTreeComboBox.Location = New System.Drawing.Point(167, 63)
+        Me.typeOfTreeComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.typeOfTreeComboBox.Name = "typeOfTreeComboBox"
+        Me.typeOfTreeComboBox.Size = New System.Drawing.Size(230, 24)
+        Me.typeOfTreeComboBox.TabIndex = 36
+        '
+        'typeOfTree
+        '
+        Me.typeOfTree.AutoSize = True
+        Me.typeOfTree.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.typeOfTree.Location = New System.Drawing.Point(54, 65)
+        Me.typeOfTree.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.typeOfTree.Name = "typeOfTree"
+        Me.typeOfTree.Size = New System.Drawing.Size(98, 16)
+        Me.typeOfTree.TabIndex = 28
+        Me.typeOfTree.Text = "Type of Tree"
         '
         'update
         '
@@ -515,7 +540,7 @@ Partial Class permitHeader
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PermitToolStripMenuItem, Me.ToolsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PermitToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(981, 24)
@@ -537,7 +562,7 @@ Partial Class permitHeader
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.PermitTypeToolStripMenuItem, Me.SystemUserToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.PermitTypeToolStripMenuItem, Me.SystemUserToolStripMenuItem, Me.DepartmentToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -584,6 +609,12 @@ Partial Class permitHeader
         Me.SystemUserToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.SystemUserToolStripMenuItem.Text = "System User"
         '
+        'DepartmentToolStripMenuItem
+        '
+        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DepartmentToolStripMenuItem.Text = "Department"
+        '
         'PermitToolStripMenuItem
         '
         Me.PermitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerToolStripMenuItem1})
@@ -594,29 +625,8 @@ Partial Class permitHeader
         'CustomerToolStripMenuItem1
         '
         Me.CustomerToolStripMenuItem1.Name = "CustomerToolStripMenuItem1"
-        Me.CustomerToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.CustomerToolStripMenuItem1.Size = New System.Drawing.Size(126, 22)
         Me.CustomerToolStripMenuItem1.Text = "Customer"
-        '
-        'typeOfTree
-        '
-        Me.typeOfTree.AutoSize = True
-        Me.typeOfTree.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.typeOfTree.Location = New System.Drawing.Point(54, 65)
-        Me.typeOfTree.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.typeOfTree.Name = "typeOfTree"
-        Me.typeOfTree.Size = New System.Drawing.Size(98, 16)
-        Me.typeOfTree.TabIndex = 28
-        Me.typeOfTree.Text = "Type of Tree"
-        '
-        'typeOfTreeComboBox
-        '
-        Me.typeOfTreeComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.typeOfTreeComboBox.FormattingEnabled = True
-        Me.typeOfTreeComboBox.Location = New System.Drawing.Point(167, 63)
-        Me.typeOfTreeComboBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.typeOfTreeComboBox.Name = "typeOfTreeComboBox"
-        Me.typeOfTreeComboBox.Size = New System.Drawing.Size(230, 24)
-        Me.typeOfTreeComboBox.TabIndex = 36
         '
         'ToolsToolStripMenuItem
         '
@@ -628,8 +638,14 @@ Partial Class permitHeader
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.LogOutToolStripMenuItem.Text = "LogOut"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'customerNameInput
         '
@@ -663,11 +679,34 @@ Partial Class permitHeader
         Me.customerId.TabIndex = 41
         Me.customerId.Text = "."
         '
+        'upload
+        '
+        Me.upload.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.upload.Location = New System.Drawing.Point(869, 59)
+        Me.upload.Name = "upload"
+        Me.upload.Size = New System.Drawing.Size(84, 23)
+        Me.upload.TabIndex = 42
+        Me.upload.Text = "Documents"
+        Me.upload.UseVisualStyleBackColor = True
+        '
+        'permitId
+        '
+        Me.permitId.AutoSize = True
+        Me.permitId.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitId.Location = New System.Drawing.Point(956, 0)
+        Me.permitId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.permitId.Name = "permitId"
+        Me.permitId.Size = New System.Drawing.Size(12, 16)
+        Me.permitId.TabIndex = 43
+        Me.permitId.Text = "."
+        '
         'permitHeader
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(981, 545)
+        Me.Controls.Add(Me.permitId)
+        Me.Controls.Add(Me.upload)
         Me.Controls.Add(Me.customerId)
         Me.Controls.Add(Me.customerNameInput)
         Me.Controls.Add(Me.customerName)
@@ -683,7 +722,7 @@ Partial Class permitHeader
         Me.Controls.Add(Me.customerNicInput)
         Me.Controls.Add(Me.customerNic)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "permitHeader"
         Me.Text = "Permit Header"
         Me.permitDetailsGroup.ResumeLayout(False)
@@ -760,4 +799,8 @@ Partial Class permitHeader
     Friend WithEvents customerNameInput As TextBox
     Friend WithEvents customerName As Label
     Friend WithEvents customerId As Label
+    Friend WithEvents upload As Button
+    Friend WithEvents permitId As Label
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -65,3 +65,5 @@ D:\Projects\Visual Studeo\permit_manager\bin\Debug\AxInterop.AcroPDFLib.dll
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Interop.AcroPDFLib.dll
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\AxInterop.AcroPDFLib.dll
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.ResolveComReference.cache
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.PermitIssuence.resources
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.report.resources

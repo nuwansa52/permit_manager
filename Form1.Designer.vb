@@ -28,14 +28,8 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.UseridDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserfnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserlnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserroleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UserdepartmentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SystemuserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.SystemuserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SystemuserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,53 +73,11 @@ Partial Class Form1
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UseridDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.UserfnameDataGridViewTextBoxColumn, Me.UserlnameDataGridViewTextBoxColumn, Me.UserroleDataGridViewTextBoxColumn, Me.UserdepartmentDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.SystemuserBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 288)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 268)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(646, 150)
         Me.DataGridView1.TabIndex = 4
-        '
-        'UseridDataGridViewTextBoxColumn
-        '
-        Me.UseridDataGridViewTextBoxColumn.DataPropertyName = "user_id"
-        Me.UseridDataGridViewTextBoxColumn.HeaderText = "user_id"
-        Me.UseridDataGridViewTextBoxColumn.Name = "UseridDataGridViewTextBoxColumn"
-        '
-        'UsernameDataGridViewTextBoxColumn
-        '
-        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "user_name"
-        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "user_name"
-        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
-        '
-        'UserfnameDataGridViewTextBoxColumn
-        '
-        Me.UserfnameDataGridViewTextBoxColumn.DataPropertyName = "user_fname"
-        Me.UserfnameDataGridViewTextBoxColumn.HeaderText = "user_fname"
-        Me.UserfnameDataGridViewTextBoxColumn.Name = "UserfnameDataGridViewTextBoxColumn"
-        '
-        'UserlnameDataGridViewTextBoxColumn
-        '
-        Me.UserlnameDataGridViewTextBoxColumn.DataPropertyName = "user_lname"
-        Me.UserlnameDataGridViewTextBoxColumn.HeaderText = "user_lname"
-        Me.UserlnameDataGridViewTextBoxColumn.Name = "UserlnameDataGridViewTextBoxColumn"
-        '
-        'UserroleDataGridViewTextBoxColumn
-        '
-        Me.UserroleDataGridViewTextBoxColumn.DataPropertyName = "user_role"
-        Me.UserroleDataGridViewTextBoxColumn.HeaderText = "user_role"
-        Me.UserroleDataGridViewTextBoxColumn.Name = "UserroleDataGridViewTextBoxColumn"
-        '
-        'UserdepartmentDataGridViewTextBoxColumn
-        '
-        Me.UserdepartmentDataGridViewTextBoxColumn.DataPropertyName = "user_department"
-        Me.UserdepartmentDataGridViewTextBoxColumn.HeaderText = "user_department"
-        Me.UserdepartmentDataGridViewTextBoxColumn.Name = "UserdepartmentDataGridViewTextBoxColumn"
-        '
-        'SystemuserBindingSource
-        '
-        Me.SystemuserBindingSource.DataMember = "system_user"
-        '
         '
         'Button4
         '
@@ -135,6 +87,10 @@ Partial Class Form1
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'SystemuserBindingSource
+        '
+        Me.SystemuserBindingSource.DataMember = "system_user"
         '
         'Form1
         '

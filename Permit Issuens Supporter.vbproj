@@ -54,6 +54,18 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.PDF.7.1.10\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.1.10.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.PDF.7.1.10\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -165,10 +177,22 @@
     <Compile Include="Permit Header.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PermitIssuence.Designer.vb">
+      <DependentUpon>PermitIssuence.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PermitIssuence.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="permitType.Designer.vb">
       <DependentUpon>permitType.vb</DependentUpon>
     </Compile>
     <Compile Include="permitType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="systemUser.Designer.vb">
@@ -224,8 +248,14 @@
     <EmbeddedResource Include="Permit Header.resx">
       <DependentUpon>Permit Header.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PermitIssuence.resx">
+      <DependentUpon>PermitIssuence.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="permitType.resx">
       <DependentUpon>permitType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="systemUser.resx">
       <DependentUpon>systemUser.vb</DependentUpon>

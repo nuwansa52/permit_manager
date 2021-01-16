@@ -33,14 +33,14 @@ Partial Class fileViewer
         Me.adobePdfReader.Location = New System.Drawing.Point(0, -1)
         Me.adobePdfReader.Name = "adobePdfReader"
         Me.adobePdfReader.OcxState = CType(resources.GetObject("adobePdfReader.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.adobePdfReader.Size = New System.Drawing.Size(422, 345)
+        Me.adobePdfReader.Size = New System.Drawing.Size(1045, 643)
         Me.adobePdfReader.TabIndex = 16
         '
         'fileViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(421, 343)
+        Me.ClientSize = New System.Drawing.Size(1045, 644)
         Me.Controls.Add(Me.adobePdfReader)
         Me.Name = "fileViewer"
         Me.Text = "File Viewer"

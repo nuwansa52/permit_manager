@@ -13,7 +13,11 @@ Public Class permitHeader
         If Common.userRole = "ROLE_FINANCE" Then
             customerSearchBtn.Visible = False
             saveBtn.Visible = False
+            MenuStrip1.Items.Item(0).Enabled = False
         End If
+        permitId.Visible = False
+        upload.Visible = False
+        customerId.Visible = False
 
         con = dbConn.dbConnect()
         Try
@@ -132,10 +136,17 @@ Public Class permitHeader
 
                             Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-                            If icount = 1 Then
-                                MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+
+                            Dim sdr1 As OleDbDataReader = findDetails(applicationNumberInput.Text, permitNumberInput.Text)
+
+                            If sdr1.Read() Then
+                                permitId.Text = sdr1("per_id")
+                                upload.Visible = True
                             End If
-                        End Using
+                        End If
+                    End Using
                     Else
                         MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
@@ -172,12 +183,17 @@ Public Class permitHeader
                 receiptNumberInput.Text = sdr("per_receipt_no")
                 customerId.Text = sdr("per_customer_id")
 
+                permitId.Text = sdr("per_id")
+                upload.Visible = True
+
                 Dim sdr1 As OleDbDataReader = customer.findDetailsById(sdr("per_customer_id"))
 
                 If sdr1.Read() Then
                     customerNicInput.Text = sdr1("cus_nic")
                     customerNameInput.Text = sdr1("cus_fname") & " " & sdr1("cus_lname")
                 End If
+            Else
+                upload.Visible = False
             End If
         Else
             MessageBox.Show("Please File Application Number Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -203,11 +219,6 @@ Public Class permitHeader
         End Try
     End Function
 
-
-    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
-        customer.Show()
-    End Sub
-
     Private Sub update_Click(sender As Object, e As EventArgs) Handles update.Click
         If Common.userRole = "ROLE_FINANCE" Then
             Dim sql As String = "UPDATE [permit_header] SET [per_receipt_no] = @perReceiptNo, [per_payment_accept_user] = @perPaymentAcceptUser
@@ -230,5 +241,49 @@ Public Class permitHeader
                 MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
+    End Sub
+
+    Private Sub upload_Click(sender As Object, e As EventArgs) Handles upload.Click
+        fileUpload.Show()
+    End Sub
+
+    Private Sub DistrictToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DistrictToolStripMenuItem.Click
+        district.Show()
+    End Sub
+
+    Private Sub CustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem.Click
+        customer.Show()
+    End Sub
+
+    Private Sub DivisionalSectretariatToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DivisionalSectretariatToolStripMenuItem.Click
+        divisionalSecretariat.Show()
+    End Sub
+
+    Private Sub GramasewaWasamToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GramasewaWasamToolStripMenuItem.Click
+        gramaSewaWasama.Show()
+    End Sub
+
+    Private Sub DepartmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartmentToolStripMenuItem.Click
+        depatment.Show()
+    End Sub
+
+    Private Sub PermitTypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermitTypeToolStripMenuItem.Click
+        permitType.Show()
+    End Sub
+
+    Private Sub SystemUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SystemUserToolStripMenuItem.Click
+        systemUser.Show()
+    End Sub
+
+    Private Sub CustomerToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem1.Click
+        customer.Show()
+    End Sub
+
+    Private Sub CityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CityToolStripMenuItem.Click
+        city.Show()
+    End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+        report.Show()
     End Sub
 End Class

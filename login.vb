@@ -35,7 +35,6 @@ Public Class login
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
         Dim common As New Common()
         common.clearData(Me)
-        fileUpload.Show()
     End Sub
 
 End Class

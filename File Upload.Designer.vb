@@ -22,24 +22,22 @@ Partial Class fileUpload
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fileUpload))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DOC1UPL = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.DOC2UPL = New System.Windows.Forms.Button()
+        Me.DOC3UPL = New System.Windows.Forms.Button()
+        Me.DOC4UPL = New System.Windows.Forms.Button()
+        Me.DOC5UPL = New System.Windows.Forms.Button()
+        Me.DOC1ViEW = New System.Windows.Forms.Button()
+        Me.DOC2ViEW = New System.Windows.Forms.Button()
+        Me.DOC3ViEW = New System.Windows.Forms.Button()
+        Me.DOC4ViEW = New System.Windows.Forms.Button()
+        Me.DOC5ViEW = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,125 +90,115 @@ Partial Class fileUpload
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Document 05"
         '
-        'Button1
+        'DOC1UPL
         '
-        Me.Button1.Location = New System.Drawing.Point(169, 52)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Upload"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DOC1UPL.Location = New System.Drawing.Point(169, 52)
+        Me.DOC1UPL.Name = "DOC1UPL"
+        Me.DOC1UPL.Size = New System.Drawing.Size(75, 23)
+        Me.DOC1UPL.TabIndex = 5
+        Me.DOC1UPL.Text = "Upload"
+        Me.DOC1UPL.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button2
+        'DOC2UPL
         '
-        Me.Button2.Location = New System.Drawing.Point(169, 93)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Upload"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.DOC2UPL.Location = New System.Drawing.Point(169, 93)
+        Me.DOC2UPL.Name = "DOC2UPL"
+        Me.DOC2UPL.Size = New System.Drawing.Size(75, 23)
+        Me.DOC2UPL.TabIndex = 6
+        Me.DOC2UPL.Text = "Upload"
+        Me.DOC2UPL.UseVisualStyleBackColor = True
         '
-        'Button3
+        'DOC3UPL
         '
-        Me.Button3.Location = New System.Drawing.Point(171, 141)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Upload"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DOC3UPL.Location = New System.Drawing.Point(171, 141)
+        Me.DOC3UPL.Name = "DOC3UPL"
+        Me.DOC3UPL.Size = New System.Drawing.Size(75, 23)
+        Me.DOC3UPL.TabIndex = 7
+        Me.DOC3UPL.Text = "Upload"
+        Me.DOC3UPL.UseVisualStyleBackColor = True
         '
-        'Button4
+        'DOC4UPL
         '
-        Me.Button4.Location = New System.Drawing.Point(169, 188)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Upload"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.DOC4UPL.Location = New System.Drawing.Point(169, 188)
+        Me.DOC4UPL.Name = "DOC4UPL"
+        Me.DOC4UPL.Size = New System.Drawing.Size(75, 23)
+        Me.DOC4UPL.TabIndex = 8
+        Me.DOC4UPL.Text = "Upload"
+        Me.DOC4UPL.UseVisualStyleBackColor = True
         '
-        'Button5
+        'DOC5UPL
         '
-        Me.Button5.Location = New System.Drawing.Point(169, 231)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 9
-        Me.Button5.Text = "Upload"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.DOC5UPL.Location = New System.Drawing.Point(169, 231)
+        Me.DOC5UPL.Name = "DOC5UPL"
+        Me.DOC5UPL.Size = New System.Drawing.Size(75, 23)
+        Me.DOC5UPL.TabIndex = 9
+        Me.DOC5UPL.Text = "Upload"
+        Me.DOC5UPL.UseVisualStyleBackColor = True
         '
-        'Button6
+        'DOC1ViEW
         '
-        Me.Button6.Location = New System.Drawing.Point(303, 52)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 10
-        Me.Button6.Text = "View"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.DOC1ViEW.Location = New System.Drawing.Point(303, 52)
+        Me.DOC1ViEW.Name = "DOC1ViEW"
+        Me.DOC1ViEW.Size = New System.Drawing.Size(75, 23)
+        Me.DOC1ViEW.TabIndex = 10
+        Me.DOC1ViEW.Text = "View"
+        Me.DOC1ViEW.UseVisualStyleBackColor = True
         '
-        'Button7
+        'DOC2ViEW
         '
-        Me.Button7.Location = New System.Drawing.Point(301, 95)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 11
-        Me.Button7.Text = "View"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.DOC2ViEW.Location = New System.Drawing.Point(301, 95)
+        Me.DOC2ViEW.Name = "DOC2ViEW"
+        Me.DOC2ViEW.Size = New System.Drawing.Size(75, 23)
+        Me.DOC2ViEW.TabIndex = 11
+        Me.DOC2ViEW.Text = "View"
+        Me.DOC2ViEW.UseVisualStyleBackColor = True
         '
-        'Button8
+        'DOC3ViEW
         '
-        Me.Button8.Location = New System.Drawing.Point(303, 139)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 12
-        Me.Button8.Text = "View"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.DOC3ViEW.Location = New System.Drawing.Point(303, 139)
+        Me.DOC3ViEW.Name = "DOC3ViEW"
+        Me.DOC3ViEW.Size = New System.Drawing.Size(75, 23)
+        Me.DOC3ViEW.TabIndex = 12
+        Me.DOC3ViEW.Text = "View"
+        Me.DOC3ViEW.UseVisualStyleBackColor = True
         '
-        'Button9
+        'DOC4ViEW
         '
-        Me.Button9.Location = New System.Drawing.Point(301, 188)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 23)
-        Me.Button9.TabIndex = 13
-        Me.Button9.Text = "View"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.DOC4ViEW.Location = New System.Drawing.Point(301, 188)
+        Me.DOC4ViEW.Name = "DOC4ViEW"
+        Me.DOC4ViEW.Size = New System.Drawing.Size(75, 23)
+        Me.DOC4ViEW.TabIndex = 13
+        Me.DOC4ViEW.Text = "View"
+        Me.DOC4ViEW.UseVisualStyleBackColor = True
         '
-        'Button10
+        'DOC5ViEW
         '
-        Me.Button10.Location = New System.Drawing.Point(301, 231)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 14
-        Me.Button10.Text = "View"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
+        Me.DOC5ViEW.Location = New System.Drawing.Point(301, 231)
+        Me.DOC5ViEW.Name = "DOC5ViEW"
+        Me.DOC5ViEW.Size = New System.Drawing.Size(75, 23)
+        Me.DOC5ViEW.TabIndex = 14
+        Me.DOC5ViEW.Text = "View"
+        Me.DOC5ViEW.UseVisualStyleBackColor = True
         '
         'fileUpload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(423, 304)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DOC5ViEW)
+        Me.Controls.Add(Me.DOC4ViEW)
+        Me.Controls.Add(Me.DOC3ViEW)
+        Me.Controls.Add(Me.DOC2ViEW)
+        Me.Controls.Add(Me.DOC1ViEW)
+        Me.Controls.Add(Me.DOC5UPL)
+        Me.Controls.Add(Me.DOC4UPL)
+        Me.Controls.Add(Me.DOC3UPL)
+        Me.Controls.Add(Me.DOC2UPL)
+        Me.Controls.Add(Me.DOC1UPL)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -228,16 +216,15 @@ Partial Class fileUpload
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents DOC1UPL As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents DOC2UPL As Button
+    Friend WithEvents DOC3UPL As Button
+    Friend WithEvents DOC4UPL As Button
+    Friend WithEvents DOC5UPL As Button
+    Friend WithEvents DOC1ViEW As Button
+    Friend WithEvents DOC2ViEW As Button
+    Friend WithEvents DOC3ViEW As Button
+    Friend WithEvents DOC4ViEW As Button
+    Friend WithEvents DOC5ViEW As Button
 End Class
