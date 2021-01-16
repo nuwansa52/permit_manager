@@ -38,23 +38,27 @@ Public Class divisionalSecretariat
     End Sub
 
     Private Sub search_Click(sender As Object, e As EventArgs) Handles search.Click
-        Try
-            Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
+        If divisionalSecInput.Text <> "" Then
+            Try
+                Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
 
-            If sdr.Read() Then
+                If sdr.Read() Then
 
-                divisionalSecInput.Text = sdr("description").ToString()
-                cityInput.SelectedValue = sdr.Item("city_id")
+                    divisionalSecInput.Text = sdr("description").ToString()
+                    cityInput.SelectedValue = sdr.Item("city_id")
 
-            Else
-                MessageBox.Show("Divisional Secretariat Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+                Else
+                    MessageBox.Show("Divisional Secretariat Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                con.Close()
+            End Try
+        Else
+            MessageBox.Show("Please File Divisional Secretariat Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Public Function findDetails(searchKey) As OleDb.OleDbDataReader
@@ -75,32 +79,36 @@ Public Class divisionalSecretariat
     End Function
 
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
-        con = dbConn.dbConnect()
+        If divisionalSecInput.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
+            Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
 
-        If sdr.Read() Then
-            Dim sql As String = "UPDATE [ag_office] SET [description] = @description, [city_id] = @city_id WHERE [description] = @description"
+            If sdr.Read() Then
+                Dim sql As String = "UPDATE [ag_office] SET [description] = @description, [city_id] = @city_id WHERE [description] = @description"
 
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
-                    sqlCom.Parameters.Add("@cityId", OleDbType.Numeric).Value = DirectCast(cityInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
+                        sqlCom.Parameters.Add("@cityId", OleDbType.Numeric).Value = DirectCast(cityInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
 
-                    sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
+                        sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
 
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
 
-                End Using
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Divisional Secretariat Not In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
-            MessageBox.Show("Divisional Secretariat Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please File Divisional Secretariat Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -110,28 +118,32 @@ Public Class divisionalSecretariat
     End Sub
 
     Private Function saveDetails() As Boolean
-        con = dbConn.dbConnect()
+        If divisionalSecInput.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
+            Dim sdr As OleDbDataReader = findDetails(cityInput.Text)
 
-        If sdr.Read() Then
-            MessageBox.Show("Divisional Secretariat Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            Dim sql As String = "INSERT INTO [ag_office] ([city_id], [description]) VALUES(@cityId, @description)"
-
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@cityId", OleDbType.Numeric).Value = DirectCast(cityInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
-
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
-                End Using
+            If sdr.Read() Then
+                MessageBox.Show("Divisional Secretariat Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Dim sql As String = "INSERT INTO [ag_office] ([city_id], [description]) VALUES(@cityId, @description)"
+
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@cityId", OleDbType.Numeric).Value = DirectCast(cityInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                        sqlCom.Parameters.Add("@description", OleDbType.VarChar).Value = cityInput.Text
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
+
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             End If
+        Else
+            MessageBox.Show("Please File Divisional Secretariat Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         Return True

@@ -103,7 +103,7 @@ Public Class city
                     MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
             Else
-                MessageBox.Show("City Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("City Not In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
             MessageBox.Show("Please File City Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)

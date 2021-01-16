@@ -59,7 +59,7 @@ Public Class district
                     MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
             Else
-                MessageBox.Show("District Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("District Not In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
             MessageBox.Show("Please File District Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -113,7 +113,7 @@ Public Class district
                 End If
             End If
         Else
-            MessageBox.Show("Please File Department Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Please File District Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         Return True

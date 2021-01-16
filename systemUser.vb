@@ -51,63 +51,71 @@ Public Class systemUser
     End Sub
 
     Private Sub search_Click(sender As Object, e As EventArgs) Handles search.Click
+        If userNameInput.Text <> "" Then
+            Try
+                Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
 
-        Try
-            Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+                If sdr.Read() Then
 
-            If sdr.Read() Then
+                    userNameInput.Text = sdr("user_name").ToString()
+                    firstNameInput.Text = sdr("user_fname").ToString()
+                    lastNameInput.Text = sdr("user_lname").ToString()
+                    roleInput.SelectedIndex = roleInput.FindString(sdr.Item("user_role").ToString()).ToString()
+                    agOfficeInput.SelectedValue = sdr.Item("ag_office_id")
+                    departmentInput.SelectedValue = sdr.Item("department_id")
+                    passwordInput.Text = sdr("password").ToString()
 
-                userNameInput.Text = sdr("user_name").ToString()
-                firstNameInput.Text = sdr("user_fname").ToString()
-                lastNameInput.Text = sdr("user_lname").ToString()
-                roleInput.SelectedIndex = roleInput.FindString(sdr.Item("user_role").ToString()).ToString()
-                agOfficeInput.SelectedValue = sdr.Item("ag_office_id")
-                departmentInput.SelectedValue = sdr.Item("department_id")
-                passwordInput.Text = sdr("password").ToString()
+                Else
+                    MessageBox.Show("User Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
 
-            Else
-                MessageBox.Show("User Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                con.Close()
+            End Try
+        Else
+            MessageBox.Show("Please File User Name Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
     End Sub
 
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
-        con = dbConn.dbConnect()
+        If userNameInput.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+            Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
 
-        If sdr.Read() Then
-            Dim sql As String = "UPDATE [system_user] SET [user_fname] = @userfName, [user_lname] = @userlName, [user_role] =  @userRole, [ag_office_id] = @agOfficeId,
+            If sdr.Read() Then
+                Dim sql As String = "UPDATE [system_user] SET [user_fname] = @userfName, [user_lname] = @userlName, [user_role] =  @userRole, [ag_office_id] = @agOfficeId,
                                 [department_id] = @departmentId, [password] = @password WHERE [user_name] = @userName"
 
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
-                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
-                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
-                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
+                        sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
+                        sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
+                        sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                        sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                        sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
 
-                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
+                        sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
 
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
 
-                End Using
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("User Not In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
-            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please File User Name Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -134,34 +142,38 @@ Public Class systemUser
     End Function
 
     Private Function saveDetails() As Boolean
-        con = dbConn.dbConnect()
+        If userNameInput.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+            Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
 
-        If sdr.Read() Then
-            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            Dim sql As String = "INSERT INTO [system_user] ([user_name], [user_fname], [user_lname], [user_role], [ag_office_id], [department_id], [password])
+            If sdr.Read() Then
+                MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                Dim sql As String = "INSERT INTO [system_user] ([user_name], [user_fname], [user_lname], [user_role], [ag_office_id], [department_id], [password])
                                 VALUES(@userName, @userfName, @userlName, @userRole, @agOfficeId, @departmentId, @password)"
 
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
-                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
-                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
-                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
-                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
+                        sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
+                        sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
+                        sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
+                        sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                        sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                        sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
-                End Using
-            Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             End If
+        Else
+            MessageBox.Show("Please File User Name Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         Return True

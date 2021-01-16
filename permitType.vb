@@ -13,50 +13,58 @@ Public Class permitType
     End Sub
 
     Private Sub search_Click(sender As Object, e As EventArgs) Handles search.Click
-        Try
-            Dim sdr As OleDb.OleDbDataReader = findDetails(permitTypeTextBox.Text)
+        If permitTypeTextBox.Text <> "" Then
+            Try
+                Dim sdr As OleDb.OleDbDataReader = findDetails(permitTypeTextBox.Text)
 
-            If sdr.Read() Then
+                If sdr.Read() Then
 
-                permitTypeTextBox.Text = sdr("Description").ToString()
+                    permitTypeTextBox.Text = sdr("Description").ToString()
 
-            Else
-                MessageBox.Show("Permit Type Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+                Else
+                    MessageBox.Show("Permit Type Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            con.Close()
-        End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                con.Close()
+            End Try
+        Else
+            MessageBox.Show("Please File Permit Type Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
-        con = dbConn.dbConnect()
+        If permitTypeTextBox.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(permitTypeTextBox.Text)
+            Dim sdr As OleDbDataReader = findDetails(permitTypeTextBox.Text)
 
-        If sdr.Read() Then
-            Dim sql As String = "UPDATE [permit_type] SET [Description] = @Description WHERE [Description] = @Description"
+            If sdr.Read() Then
+                Dim sql As String = "UPDATE [permit_type] SET [Description] = @Description WHERE [Description] = @Description"
 
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
 
-                    sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
+                        sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
 
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
 
-                End Using
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Permit Type Not In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
-            MessageBox.Show("Permit Type Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please File Permit Type Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -83,27 +91,31 @@ Public Class permitType
     End Function
 
     Private Function saveDetails() As Boolean
-        con = dbConn.dbConnect()
+        If permitTypeTextBox.Text <> "" Then
+            con = dbConn.dbConnect()
 
-        Dim sdr As OleDbDataReader = findDetails(permitTypeTextBox.Text)
+            Dim sdr As OleDbDataReader = findDetails(permitTypeTextBox.Text)
 
-        If sdr.Read() Then
-            MessageBox.Show("District Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            Dim sql As String = "INSERT INTO [permit_type] ([Description]) VALUES(@Description)"
-
-            If con.State = ConnectionState.Open Then
-                Using sqlCom = New OleDbCommand(sql, con)
-                    sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
-                    Dim icount As Integer = sqlCom.ExecuteNonQuery
-
-                    If icount = 1 Then
-                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
-                    End If
-                End Using
+            If sdr.Read() Then
+                MessageBox.Show("District Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Dim sql As String = "INSERT INTO [permit_type] ([Description]) VALUES(@Description)"
+
+                If con.State = ConnectionState.Open Then
+                    Using sqlCom = New OleDbCommand(sql, con)
+                        sqlCom.Parameters.Add("@Description", OleDbType.VarChar).Value = permitTypeTextBox.Text
+                        Dim icount As Integer = sqlCom.ExecuteNonQuery
+
+                        If icount = 1 Then
+                            MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                        End If
+                    End Using
+                Else
+                    MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
             End If
+        Else
+            MessageBox.Show("Please File Permit Type Field", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         Return True
