@@ -1,7 +1,12 @@
-﻿Imports System.Drawing.Printing
+﻿Imports System.Data.OleDb
 Imports System.IO
+Imports Spire.PdfViewer.Forms
 
-Public Class fileUpload
+Partial Public Class fileUpload
+    Dim dbConn = New AccessDataBase()
+    Dim con As New OleDb.OleDbConnection
+    Public Property AxAcroPDF1 As Object
+
     Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
 
     End Sub
@@ -29,62 +34,52 @@ Public Class fileUpload
         End If
     End Sub
 
-    Private WithEvents docPrint As New PrintDocument()
-    ' Declare a string to hold the entire document contents. 
-    ' Declare a string to hold the entire document contents. 
-    Private documentContents As String
 
-    ' Declare a variable to hold the portion of the document that 
-    ' is not printed. 
-    Private stringToPrint As String
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+    End Sub
+
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'Dim e As New PrintPageEventArgs
-        Dim docName As String = "C:\Users\Nuwan\Downloads\Fernando_K.A.M.S.W_E1641032.pdf"
-
-        ' docPrint.DocumentName = docName
-
-        Dim stream As New FileStream(docName, FileMode.Open)
-        Try
-            Dim reader As New StreamReader(stream)
-            Try
-                documentContents = reader.ReadToEnd()
-                stringToPrint = documentContents
-            Finally
-                reader.Dispose()
-            End Try
-        Finally
-            stream.Dispose()
-        End Try
+        Dim pdfDoc As String = "D:\michelle\e-iceblue\Spire.Office.pdf"
 
 
-        PrintPreviewDialog1.Document = docPrint
-        PrintPreviewDialog1.WindowState = FormWindowState.Maximized
-        PrintPreviewDialog1.ShowDialog()
+        fileViewer.adobePdfReader.src = pdfDoc
+        fileViewer.Show()
+
+
     End Sub
 
+    Function trackUpload(path, headerId)
 
-    Private Sub PrintPreviewDialog1_Load(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles docPrint.PrintPage
-        Dim charactersOnPage As Integer = 0
-        Dim linesPerPage As Integer = 0
+        con = dbConn.dbConnect()
 
-        ' Sets the value of charactersOnPage to the number of characters  
-        ' of stringToPrint that will fit within the bounds of the page.
-        e.Graphics.MeasureString(stringToPrint, Me.Font, e.MarginBounds.Size,
-        StringFormat.GenericTypographic, charactersOnPage, linesPerPage)
-        MsgBox("LL")
-        ' Draws the string within the bounds of the page.
-        e.Graphics.DrawString(stringToPrint, Me.Font, Brushes.Black,
-            e.MarginBounds, StringFormat.GenericTypographic)
+        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
 
-        ' Remove the portion of the string that has been printed.
-        stringToPrint = stringToPrint.Substring(charactersOnPage)
+        If sdr.Read() Then
+            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim sql As String = "INSERT INTO [system_user] ([user_name], [user_fname], [user_lname], [user_role], [ag_office_id], [department_id], [password])
+                                VALUES(@userName, @userfName, @userlName, @userRole, @agOfficeId, @departmentId, @password)"
 
-        ' Check to see if more pages are to be printed.
-        e.HasMorePages = stringToPrint.Length > 0
+            If con.State = ConnectionState.Open Then
+                Using sqlCom = New OleDbCommand(sql, con)
+                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
+                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
+                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
+                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
+                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
+                    Dim icount As Integer = sqlCom.ExecuteNonQuery
 
-        ' If there are no more pages, reset the string to be printed. 
-        If Not e.HasMorePages Then
-            stringToPrint = documentContents
+                    If icount = 1 Then
+                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                    End If
+                End Using
+            Else
+                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
         End If
-    End Sub
+
+    End Function
 End Class
