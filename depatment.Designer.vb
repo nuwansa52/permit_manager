@@ -23,9 +23,7 @@ Partial Class depatment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.departmentLabel = New System.Windows.Forms.Label()
-        Me.clearBtn = New System.Windows.Forms.Button()
-        Me.saveBtn = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.departmentInput = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +36,9 @@ Partial Class depatment
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,33 +52,13 @@ Partial Class depatment
         Me.departmentLabel.TabIndex = 4
         Me.departmentLabel.Text = "Department"
         '
-        'clearBtn
+        'departmentInput
         '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(372, 144)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(82, 32)
-        Me.clearBtn.TabIndex = 5
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(250, 144)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(82, 32)
-        Me.saveBtn.TabIndex = 6
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(154, 78)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(204, 23)
-        Me.TextBox1.TabIndex = 7
+        Me.departmentInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.departmentInput.Location = New System.Drawing.Point(154, 78)
+        Me.departmentInput.Name = "departmentInput"
+        Me.departmentInput.Size = New System.Drawing.Size(204, 23)
+        Me.departmentInput.TabIndex = 7
         '
         'MenuStrip1
         '
@@ -98,7 +79,7 @@ Partial Class depatment
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ViewToolStripMenuItem
@@ -159,16 +140,47 @@ Partial Class depatment
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(254, 148)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 31
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(364, 148)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 29
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(144, 148)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 30
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
         'depatment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(473, 214)
-        Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.departmentInput)
         Me.Controls.Add(Me.departmentLabel)
         Me.Name = "depatment"
         Me.Text = "Depatment"
@@ -179,9 +191,7 @@ Partial Class depatment
 
     End Sub
     Friend WithEvents departmentLabel As Label
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents departmentInput As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
@@ -194,4 +204,7 @@ Partial Class depatment
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

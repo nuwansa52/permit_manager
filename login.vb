@@ -11,7 +11,6 @@ Public Class login
         cmd.Parameters.Add("@userName", userName.Text)
 
         Dim sdr As OleDbDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
-        Dim comboSource As New Dictionary(Of String, String)()
 
         If sdr.Read() Then
 

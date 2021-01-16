@@ -23,9 +23,7 @@ Partial Class gramaSewaWasama
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gramasewaWasamLabel = New System.Windows.Forms.Label()
-        Me.gramasewaWasTextBox = New System.Windows.Forms.TextBox()
-        Me.clearBtn = New System.Windows.Forms.Button()
-        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.gramasewaWasInput = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +36,11 @@ Partial Class gramaSewaWasama
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.divisionalSecretariatInput = New System.Windows.Forms.ComboBox()
+        Me.district = New System.Windows.Forms.Label()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,40 +54,20 @@ Partial Class gramaSewaWasama
         Me.gramasewaWasamLabel.TabIndex = 0
         Me.gramasewaWasamLabel.Text = "Gramasewa Wasama"
         '
-        'gramasewaWasTextBox
+        'gramasewaWasInput
         '
-        Me.gramasewaWasTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gramasewaWasTextBox.Location = New System.Drawing.Point(204, 67)
-        Me.gramasewaWasTextBox.Name = "gramasewaWasTextBox"
-        Me.gramasewaWasTextBox.Size = New System.Drawing.Size(214, 22)
-        Me.gramasewaWasTextBox.TabIndex = 1
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(416, 131)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
-        Me.clearBtn.TabIndex = 3
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(294, 131)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
-        Me.saveBtn.TabIndex = 4
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
+        Me.gramasewaWasInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gramasewaWasInput.Location = New System.Drawing.Point(204, 67)
+        Me.gramasewaWasInput.Name = "gramasewaWasInput"
+        Me.gramasewaWasInput.Size = New System.Drawing.Size(214, 22)
+        Me.gramasewaWasInput.TabIndex = 1
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(518, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(525, 24)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -159,16 +142,68 @@ Partial Class gramaSewaWasama
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'divisionalSecretariatInput
+        '
+        Me.divisionalSecretariatInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.divisionalSecretariatInput.FormattingEnabled = True
+        Me.divisionalSecretariatInput.Location = New System.Drawing.Point(204, 116)
+        Me.divisionalSecretariatInput.Name = "divisionalSecretariatInput"
+        Me.divisionalSecretariatInput.Size = New System.Drawing.Size(214, 24)
+        Me.divisionalSecretariatInput.TabIndex = 35
+        '
+        'district
+        '
+        Me.district.AutoSize = True
+        Me.district.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.district.Location = New System.Drawing.Point(17, 119)
+        Me.district.Name = "district"
+        Me.district.Size = New System.Drawing.Size(163, 17)
+        Me.district.TabIndex = 34
+        Me.district.Text = "Divisional Secretariat"
+        '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(305, 172)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 38
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(414, 172)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 36
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(195, 172)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 37
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
         'gramaSewaWasama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(518, 195)
-        Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.ClientSize = New System.Drawing.Size(525, 225)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
-        Me.Controls.Add(Me.gramasewaWasTextBox)
+        Me.Controls.Add(Me.divisionalSecretariatInput)
+        Me.Controls.Add(Me.district)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.gramasewaWasInput)
         Me.Controls.Add(Me.gramasewaWasamLabel)
         Me.Name = "gramaSewaWasama"
         Me.Text = "Grama Sewa Wasama"
@@ -180,9 +215,7 @@ Partial Class gramaSewaWasama
     End Sub
 
     Friend WithEvents gramasewaWasamLabel As Label
-    Friend WithEvents gramasewaWasTextBox As TextBox
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
+    Friend WithEvents gramasewaWasInput As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
@@ -195,4 +228,9 @@ Partial Class gramaSewaWasama
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents divisionalSecretariatInput As ComboBox
+    Friend WithEvents district As Label
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

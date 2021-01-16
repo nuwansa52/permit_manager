@@ -36,33 +36,137 @@ Public Class systemUser
 
             End If
         Catch ex As Exception
-            MsgBox(ex.ToString)
+            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             con.Close()
         End Try
     End Sub
 
-    Private Sub saveBtn_Click(sender As Object, e As EventArgs)
+    Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+        saveDetails()
+    End Sub
 
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        saveDetails()
+    End Sub
+
+    Private Sub search_Click(sender As Object, e As EventArgs) Handles search.Click
+
+        Try
+            Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+
+            If sdr.Read() Then
+
+                userNameInput.Text = sdr("user_name").ToString()
+                firstNameInput.Text = sdr("user_fname").ToString()
+                lastNameInput.Text = sdr("user_lname").ToString()
+                roleInput.SelectedIndex = roleInput.FindString(sdr.Item("user_role").ToString()).ToString()
+                agOfficeInput.SelectedValue = sdr.Item("ag_office_id")
+                departmentInput.SelectedValue = sdr.Item("department_id")
+                passwordInput.Text = sdr("password").ToString()
+
+            Else
+                MessageBox.Show("User Not Found", "Info!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
+    Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
         con = dbConn.dbConnect()
 
-        Dim value As String = DirectCast(roleInput.SelectedItem, KeyValuePair(Of String, String)).Value
+        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
 
-        Dim sql As String = "INSERT INTO [system_user] VALUES(@userName, @userfName, @userlName, @userRole, @agOfficeId, @departmentId, @password)"
+        If sdr.Read() Then
+            Dim sql As String = "UPDATE [system_user] SET [user_fname] = @userfName, [user_lname] = @userlName, [user_role] =  @userRole, [ag_office_id] = @agOfficeId,
+                                [department_id] = @departmentId, [password] = @password WHERE [user_name] = @userName"
 
-        If con.State = ConnectionState.Open Then
-            Using sqlCom = New OleDbCommand(sql, con)
-                sqlCom.Parameters.Add("@userName", OleDbType.VarWChar).Value = firstName.Text
-                sqlCom.Parameters.Add("@userfName", OleDbType.VarWChar).Value = firstName.Text
-                sqlCom.Parameters.Add("@userlName", OleDbType.VarWChar).Value = lastName.Text
-                sqlCom.Parameters.Add("@userRole", OleDbType.VarWChar).Value = DirectCast(roleInput.SelectedItem, KeyValuePair(Of String, String)).Key
-                sqlCom.Parameters.Add("@agOfficeId", OleDbType.VarNumeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                sqlCom.Parameters.Add("@departmentId", OleDbType.VarNumeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
-                sqlCom.Parameters.Add("@password", OleDbType.VarWChar).Value = password.Text
-                Dim icount As Integer = sqlCom.ExecuteNonQuery
-            End Using
+            If con.State = ConnectionState.Open Then
+                Using sqlCom = New OleDbCommand(sql, con)
+                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
+                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
+                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
+                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
+
+                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
+
+                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+
+                    If icount = 1 Then
+                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                    End If
+
+                End Using
+            Else
+                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Else
+            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
+    Private Sub clearBtn_Click(sender As Object, e As EventArgs) Handles clearBtn.Click
+        Dim common As New Common()
+        common.clearData(Me)
+    End Sub
+
+    Public Function findDetails(searchKey) As OleDb.OleDbDataReader
+        con = dbConn.dbConnect()
+        Try
+            If con.State = ConnectionState.Open Then
+                'User Details Load
+                Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [system_user] WHERE [user_name] = @userName", con)
+                cmd.Parameters.Add("@userName", searchKey)
+                Dim sdr As OleDbDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+
+                Return sdr
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Function
+
+    Private Function saveDetails() As Boolean
+        con = dbConn.dbConnect()
+
+        Dim sdr As OleDbDataReader = findDetails(userNameInput.Text)
+
+        If sdr.Read() Then
+            MessageBox.Show("User Already In the System", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim sql As String = "INSERT INTO [system_user] ([user_name], [user_fname], [user_lname], [user_role], [ag_office_id], [department_id], [password])
+                                VALUES(@userName, @userfName, @userlName, @userRole, @agOfficeId, @departmentId, @password)"
+
+            If con.State = ConnectionState.Open Then
+                Using sqlCom = New OleDbCommand(sql, con)
+                    sqlCom.Parameters.Add("@userName", OleDbType.VarChar).Value = userNameInput.Text
+                    sqlCom.Parameters.Add("@userfName", OleDbType.VarChar).Value = firstNameInput.Text
+                    sqlCom.Parameters.Add("@userlName", OleDbType.VarChar).Value = lastNameInput.Text
+                    sqlCom.Parameters.Add("@userRole", OleDbType.VarChar).Value = roleInput.SelectedItem.ToString
+                    sqlCom.Parameters.Add("@agOfficeId", OleDbType.Numeric).Value = DirectCast(agOfficeInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@departmentId", OleDbType.Numeric).Value = DirectCast(departmentInput.SelectedItem, KeyValuePair(Of Integer, String)).Key
+                    sqlCom.Parameters.Add("@password", OleDbType.VarChar).Value = passwordInput.Text
+                    Dim icount As Integer = sqlCom.ExecuteNonQuery
+
+                    If icount = 1 Then
+                        MessageBox.Show("Successfully Saved", "Success!", MessageBoxButtons.OK, MessageBoxIcon.None)
+                    End If
+                End Using
+            Else
+                MessageBox.Show("DB Connection Issue", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        End If
+
+        Return True
+    End Function
+
     Private Sub DistrictToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DistrictToolStripMenuItem.Click
         district.Show()
     End Sub
@@ -83,7 +187,7 @@ Public Class systemUser
         gramaSewaWasama.Show()
     End Sub
 
-    Private Sub DepartmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartmentToolStripMenuItem.Click
+    Private Sub DepartmentToolStripMenuItem_Click(sender As Object, e As EventArgs)
         department.Show()
     End Sub
 
@@ -91,29 +195,8 @@ Public Class systemUser
         permitType.Show()
     End Sub
 
-    Private Sub search_Click(sender As Object, e As EventArgs) Handles search.Click
-        con = dbConn.dbConnect()
-        Try
-            If con.State = ConnectionState.Open Then
-                'City Load
-                Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [system_user] WHERE [user_name]", con)
-                Dim sdr As OleDbDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
-                If sdr.Read() Then
-
-                    userName.Text = sdr("user_name").ToString()
-                    firstName.Text = sdr("user_fname").ToString()
-                    lastName.Text = sdr("user_lname").ToString()
-                    roleInput.SelectedIndex = roleInput.FindString(sdr.Item("user_role").ToString()).ToString()
-                    agOfficeInput.SelectedIndex = roleInput.FindString(sdr.Item("ag_office_id").ToString()).ToString()
-                    departmentInput.SelectedIndex = roleInput.FindString(sdr.Item("department_id").ToString()).ToString()
-                    password.Text = sdr("password").ToString()
-
-                End If
-            End If
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        Finally
-            con.Close()
-        End Try
+    Private Sub DepartmentToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles DepartmentToolStripMenuItem.Click
+        department.Show()
     End Sub
+
 End Class

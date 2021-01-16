@@ -24,10 +24,8 @@ Partial Class divisionalSecretariat
     Private Sub InitializeComponent()
         Me.cityLable = New System.Windows.Forms.Label()
         Me.divisionalSectxbox = New System.Windows.Forms.Label()
-        Me.divisionalSecTextBox = New System.Windows.Forms.TextBox()
-        Me.cityComboBox = New System.Windows.Forms.ComboBox()
-        Me.clearBtn = New System.Windows.Forms.Button()
-        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.divisionalSecInput = New System.Windows.Forms.TextBox()
+        Me.cityInput = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,6 +38,9 @@ Partial Class divisionalSecretariat
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,42 +64,22 @@ Partial Class divisionalSecretariat
         Me.divisionalSectxbox.TabIndex = 0
         Me.divisionalSectxbox.Text = "Divisional Secretariat"
         '
-        'divisionalSecTextBox
+        'divisionalSecInput
         '
-        Me.divisionalSecTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.divisionalSecTextBox.Location = New System.Drawing.Point(202, 61)
-        Me.divisionalSecTextBox.Name = "divisionalSecTextBox"
-        Me.divisionalSecTextBox.Size = New System.Drawing.Size(233, 22)
-        Me.divisionalSecTextBox.TabIndex = 1
+        Me.divisionalSecInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.divisionalSecInput.Location = New System.Drawing.Point(202, 61)
+        Me.divisionalSecInput.Name = "divisionalSecInput"
+        Me.divisionalSecInput.Size = New System.Drawing.Size(233, 22)
+        Me.divisionalSecInput.TabIndex = 1
         '
-        'cityComboBox
+        'cityInput
         '
-        Me.cityComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cityComboBox.FormattingEnabled = True
-        Me.cityComboBox.Location = New System.Drawing.Point(202, 106)
-        Me.cityComboBox.Name = "cityComboBox"
-        Me.cityComboBox.Size = New System.Drawing.Size(233, 24)
-        Me.cityComboBox.TabIndex = 3
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(444, 165)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
-        Me.clearBtn.TabIndex = 4
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(322, 165)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
-        Me.saveBtn.TabIndex = 5
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
+        Me.cityInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cityInput.FormattingEnabled = True
+        Me.cityInput.Location = New System.Drawing.Point(202, 106)
+        Me.cityInput.Name = "cityInput"
+        Me.cityInput.Size = New System.Drawing.Size(233, 24)
+        Me.cityInput.TabIndex = 3
         '
         'MenuStrip1
         '
@@ -119,7 +100,7 @@ Partial Class divisionalSecretariat
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ViewToolStripMenuItem
@@ -180,17 +161,48 @@ Partial Class divisionalSecretariat
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(332, 172)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 34
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(441, 172)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 32
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(222, 172)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 33
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
         'divisionalSecretariat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(554, 227)
-        Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
-        Me.Controls.Add(Me.cityComboBox)
-        Me.Controls.Add(Me.divisionalSecTextBox)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.cityInput)
+        Me.Controls.Add(Me.divisionalSecInput)
         Me.Controls.Add(Me.divisionalSectxbox)
         Me.Controls.Add(Me.cityLable)
         Me.Name = "divisionalSecretariat"
@@ -204,10 +216,8 @@ Partial Class divisionalSecretariat
 
     Friend WithEvents cityLable As Label
     Friend WithEvents divisionalSectxbox As Label
-    Friend WithEvents divisionalSecTextBox As TextBox
-    Friend WithEvents cityComboBox As ComboBox
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
+    Friend WithEvents divisionalSecInput As TextBox
+    Friend WithEvents cityInput As ComboBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
@@ -220,4 +230,7 @@ Partial Class divisionalSecretariat
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

@@ -35,9 +35,10 @@ Partial Class permitType
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.permitTypeLabel = New System.Windows.Forms.Label()
         Me.permitTypeTextBox = New System.Windows.Forms.TextBox()
+        Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
         Me.saveBtn = New System.Windows.Forms.Button()
-        Me.search = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class permitType
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(467, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(463, 24)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -60,7 +61,7 @@ Partial Class permitType
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'ViewToolStripMenuItem
@@ -127,46 +128,57 @@ Partial Class permitType
         Me.permitTypeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.permitTypeTextBox.Location = New System.Drawing.Point(127, 72)
         Me.permitTypeTextBox.Name = "permitTypeTextBox"
-        Me.permitTypeTextBox.Size = New System.Drawing.Size(184, 22)
+        Me.permitTypeTextBox.Size = New System.Drawing.Size(206, 22)
         Me.permitTypeTextBox.TabIndex = 25
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(324, 132)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
-        Me.clearBtn.TabIndex = 26
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(202, 132)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
-        Me.saveBtn.TabIndex = 27
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
         '
         'search
         '
-        Me.search.Location = New System.Drawing.Point(339, 72)
+        Me.search.Location = New System.Drawing.Point(346, 72)
         Me.search.Name = "search"
         Me.search.Size = New System.Drawing.Size(75, 23)
         Me.search.TabIndex = 28
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(221, 143)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 37
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(331, 143)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 35
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(111, 143)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 36
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
         'permitType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(467, 206)
-        Me.Controls.Add(Me.search)
+        Me.ClientSize = New System.Drawing.Size(463, 206)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
+        Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.permitTypeTextBox)
         Me.Controls.Add(Me.permitTypeLabel)
         Me.Controls.Add(Me.MenuStrip1)
@@ -191,8 +203,9 @@ Partial Class permitType
     Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents permitTypeLabel As Label
     Friend WithEvents permitTypeTextBox As TextBox
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
     Friend WithEvents search As Button
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

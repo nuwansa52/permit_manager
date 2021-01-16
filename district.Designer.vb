@@ -23,9 +23,7 @@ Partial Class district
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.districtLabel = New System.Windows.Forms.Label()
-        Me.districtTextBox = New System.Windows.Forms.TextBox()
-        Me.clearBtn = New System.Windows.Forms.Button()
-        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.districtInput = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +36,9 @@ Partial Class district
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,33 +52,13 @@ Partial Class district
         Me.districtLabel.TabIndex = 0
         Me.districtLabel.Text = "District"
         '
-        'districtTextBox
+        'districtInput
         '
-        Me.districtTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.districtTextBox.Location = New System.Drawing.Point(111, 84)
-        Me.districtTextBox.Name = "districtTextBox"
-        Me.districtTextBox.Size = New System.Drawing.Size(233, 22)
-        Me.districtTextBox.TabIndex = 6
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(347, 137)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
-        Me.clearBtn.TabIndex = 7
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(225, 137)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
-        Me.saveBtn.TabIndex = 8
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
+        Me.districtInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.districtInput.Location = New System.Drawing.Point(111, 84)
+        Me.districtInput.Name = "districtInput"
+        Me.districtInput.Size = New System.Drawing.Size(233, 22)
+        Me.districtInput.TabIndex = 6
         '
         'MenuStrip1
         '
@@ -159,16 +140,47 @@ Partial Class district
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(237, 155)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 34
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(347, 155)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 32
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(127, 155)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 33
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
         'district
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(458, 221)
-        Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
-        Me.Controls.Add(Me.districtTextBox)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.districtInput)
         Me.Controls.Add(Me.districtLabel)
         Me.Name = "district"
         Me.Text = "District"
@@ -180,9 +192,7 @@ Partial Class district
     End Sub
 
     Friend WithEvents districtLabel As Label
-    Friend WithEvents districtTextBox As TextBox
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
+    Friend WithEvents districtInput As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
@@ -195,4 +205,7 @@ Partial Class district
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
 End Class

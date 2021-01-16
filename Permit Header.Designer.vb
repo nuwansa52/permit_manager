@@ -58,167 +58,188 @@ Partial Class Permit_Header
         'permitType
         '
         Me.permitType.AutoSize = True
-        Me.permitType.Location = New System.Drawing.Point(30, 94)
+        Me.permitType.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitType.Location = New System.Drawing.Point(59, 101)
         Me.permitType.Name = "permitType"
-        Me.permitType.Size = New System.Drawing.Size(63, 13)
+        Me.permitType.Size = New System.Drawing.Size(84, 17)
         Me.permitType.TabIndex = 0
         Me.permitType.Text = "Permit Type"
         '
         'permitTypeInput
         '
+        Me.permitTypeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.permitTypeInput.FormattingEnabled = True
-        Me.permitTypeInput.Location = New System.Drawing.Point(121, 91)
+        Me.permitTypeInput.Location = New System.Drawing.Point(190, 94)
         Me.permitTypeInput.Name = "permitTypeInput"
-        Me.permitTypeInput.Size = New System.Drawing.Size(121, 21)
+        Me.permitTypeInput.Size = New System.Drawing.Size(121, 24)
         Me.permitTypeInput.TabIndex = 1
         '
         'applicationNo
         '
         Me.applicationNo.AutoSize = True
-        Me.applicationNo.Location = New System.Drawing.Point(12, 53)
+        Me.applicationNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applicationNo.Location = New System.Drawing.Point(12, 56)
         Me.applicationNo.Name = "applicationNo"
-        Me.applicationNo.Size = New System.Drawing.Size(99, 13)
+        Me.applicationNo.Size = New System.Drawing.Size(131, 17)
         Me.applicationNo.TabIndex = 2
         Me.applicationNo.Text = "Application Number"
         '
         'applicationNumberInput
         '
-        Me.applicationNumberInput.Location = New System.Drawing.Point(160, 50)
+        Me.applicationNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applicationNumberInput.Location = New System.Drawing.Point(190, 53)
         Me.applicationNumberInput.Name = "applicationNumberInput"
-        Me.applicationNumberInput.Size = New System.Drawing.Size(100, 20)
+        Me.applicationNumberInput.Size = New System.Drawing.Size(121, 23)
         Me.applicationNumberInput.TabIndex = 3
         '
         'transportFrom
         '
         Me.transportFrom.AutoSize = True
-        Me.transportFrom.Location = New System.Drawing.Point(30, 207)
+        Me.transportFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transportFrom.Location = New System.Drawing.Point(66, 266)
         Me.transportFrom.Name = "transportFrom"
-        Me.transportFrom.Size = New System.Drawing.Size(78, 13)
+        Me.transportFrom.Size = New System.Drawing.Size(106, 17)
         Me.transportFrom.TabIndex = 5
         Me.transportFrom.Text = "Transport From"
         '
         'transportTo
         '
         Me.transportTo.AutoSize = True
-        Me.transportTo.Location = New System.Drawing.Point(40, 265)
+        Me.transportTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transportTo.Location = New System.Drawing.Point(81, 299)
         Me.transportTo.Name = "transportTo"
-        Me.transportTo.Size = New System.Drawing.Size(68, 13)
+        Me.transportTo.Size = New System.Drawing.Size(91, 17)
         Me.transportTo.TabIndex = 6
         Me.transportTo.Text = "Transport To"
         '
         'transferFromInput
         '
-        Me.transferFromInput.Location = New System.Drawing.Point(142, 200)
+        Me.transferFromInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transferFromInput.Location = New System.Drawing.Point(208, 262)
         Me.transferFromInput.Name = "transferFromInput"
-        Me.transferFromInput.Size = New System.Drawing.Size(100, 20)
+        Me.transferFromInput.Size = New System.Drawing.Size(141, 23)
         Me.transferFromInput.TabIndex = 7
         '
         'transferToInput
         '
-        Me.transferToInput.Location = New System.Drawing.Point(142, 258)
+        Me.transferToInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transferToInput.Location = New System.Drawing.Point(208, 293)
         Me.transferToInput.Name = "transferToInput"
-        Me.transferToInput.Size = New System.Drawing.Size(100, 20)
+        Me.transferToInput.Size = New System.Drawing.Size(141, 23)
         Me.transferToInput.TabIndex = 8
         '
         'transportDateTo
         '
         Me.transportDateTo.AutoSize = True
-        Me.transportDateTo.Location = New System.Drawing.Point(54, 376)
+        Me.transportDateTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transportDateTo.Location = New System.Drawing.Point(69, 372)
         Me.transportDateTo.Name = "transportDateTo"
-        Me.transportDateTo.Size = New System.Drawing.Size(94, 13)
+        Me.transportDateTo.Size = New System.Drawing.Size(125, 17)
         Me.transportDateTo.TabIndex = 9
         Me.transportDateTo.Text = "Transport Date To"
         '
         'transportDateFrom
         '
         Me.transportDateFrom.AutoSize = True
-        Me.transportDateFrom.Location = New System.Drawing.Point(54, 331)
+        Me.transportDateFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.transportDateFrom.Location = New System.Drawing.Point(54, 334)
         Me.transportDateFrom.Name = "transportDateFrom"
-        Me.transportDateFrom.Size = New System.Drawing.Size(104, 13)
+        Me.transportDateFrom.Size = New System.Drawing.Size(140, 17)
         Me.transportDateFrom.TabIndex = 10
         Me.transportDateFrom.Text = "Transport Date From"
         '
         'dateTimePickerFrom
         '
-        Me.dateTimePickerFrom.Location = New System.Drawing.Point(202, 325)
+        Me.dateTimePickerFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateTimePickerFrom.Location = New System.Drawing.Point(232, 328)
         Me.dateTimePickerFrom.Name = "dateTimePickerFrom"
-        Me.dateTimePickerFrom.Size = New System.Drawing.Size(117, 20)
+        Me.dateTimePickerFrom.Size = New System.Drawing.Size(117, 23)
         Me.dateTimePickerFrom.TabIndex = 11
         '
         'dateTimePickerTo
         '
-        Me.dateTimePickerTo.Location = New System.Drawing.Point(202, 369)
+        Me.dateTimePickerTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateTimePickerTo.Location = New System.Drawing.Point(232, 372)
         Me.dateTimePickerTo.Name = "dateTimePickerTo"
-        Me.dateTimePickerTo.Size = New System.Drawing.Size(117, 20)
+        Me.dateTimePickerTo.Size = New System.Drawing.Size(117, 23)
         Me.dateTimePickerTo.TabIndex = 12
         '
         'vehicleNumber
         '
         Me.vehicleNumber.AutoSize = True
-        Me.vehicleNumber.Location = New System.Drawing.Point(30, 141)
+        Me.vehicleNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vehicleNumber.Location = New System.Drawing.Point(35, 135)
         Me.vehicleNumber.Name = "vehicleNumber"
-        Me.vehicleNumber.Size = New System.Drawing.Size(82, 13)
+        Me.vehicleNumber.Size = New System.Drawing.Size(108, 17)
         Me.vehicleNumber.TabIndex = 13
         Me.vehicleNumber.Text = "Vehicle Number"
         '
         'vehicleNumberInput
         '
-        Me.vehicleNumberInput.Location = New System.Drawing.Point(142, 134)
+        Me.vehicleNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.vehicleNumberInput.Location = New System.Drawing.Point(190, 135)
         Me.vehicleNumberInput.Name = "vehicleNumberInput"
-        Me.vehicleNumberInput.Size = New System.Drawing.Size(100, 20)
+        Me.vehicleNumberInput.Size = New System.Drawing.Size(121, 23)
         Me.vehicleNumberInput.TabIndex = 14
         '
         'paymentVoucherInput
         '
-        Me.paymentVoucherInput.Location = New System.Drawing.Point(462, 104)
+        Me.paymentVoucherInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentVoucherInput.Location = New System.Drawing.Point(480, 43)
         Me.paymentVoucherInput.Name = "paymentVoucherInput"
-        Me.paymentVoucherInput.Size = New System.Drawing.Size(100, 20)
+        Me.paymentVoucherInput.Size = New System.Drawing.Size(100, 23)
         Me.paymentVoucherInput.TabIndex = 16
         '
         'paymentVoucher
         '
         Me.paymentVoucher.AutoSize = True
-        Me.paymentVoucher.Location = New System.Drawing.Point(350, 111)
+        Me.paymentVoucher.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentVoucher.Location = New System.Drawing.Point(339, 49)
         Me.paymentVoucher.Name = "paymentVoucher"
-        Me.paymentVoucher.Size = New System.Drawing.Size(91, 13)
+        Me.paymentVoucher.Size = New System.Drawing.Size(120, 17)
         Me.paymentVoucher.TabIndex = 15
         Me.paymentVoucher.Text = "Payment Voucher"
         '
         'permitNumberInput
         '
-        Me.permitNumberInput.Location = New System.Drawing.Point(462, 167)
+        Me.permitNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitNumberInput.Location = New System.Drawing.Point(480, 106)
         Me.permitNumberInput.Name = "permitNumberInput"
-        Me.permitNumberInput.Size = New System.Drawing.Size(100, 20)
+        Me.permitNumberInput.Size = New System.Drawing.Size(100, 23)
         Me.permitNumberInput.TabIndex = 18
         '
         'permitNumber
         '
         Me.permitNumber.AutoSize = True
-        Me.permitNumber.Location = New System.Drawing.Point(350, 174)
+        Me.permitNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permitNumber.Location = New System.Drawing.Point(339, 112)
         Me.permitNumber.Name = "permitNumber"
-        Me.permitNumber.Size = New System.Drawing.Size(76, 13)
+        Me.permitNumber.Size = New System.Drawing.Size(102, 17)
         Me.permitNumber.TabIndex = 17
         Me.permitNumber.Text = "Permit Number"
         '
         'customerInput
         '
-        Me.customerInput.Location = New System.Drawing.Point(462, 220)
+        Me.customerInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customerInput.Location = New System.Drawing.Point(491, 187)
         Me.customerInput.Name = "customerInput"
-        Me.customerInput.Size = New System.Drawing.Size(100, 20)
+        Me.customerInput.Size = New System.Drawing.Size(100, 23)
         Me.customerInput.TabIndex = 20
         '
         'customerNic
         '
         Me.customerNic.AutoSize = True
-        Me.customerNic.Location = New System.Drawing.Point(350, 227)
+        Me.customerNic.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customerNic.Location = New System.Drawing.Point(350, 193)
         Me.customerNic.Name = "customerNic"
-        Me.customerNic.Size = New System.Drawing.Size(72, 13)
+        Me.customerNic.Size = New System.Drawing.Size(94, 17)
         Me.customerNic.TabIndex = 19
         Me.customerNic.Text = "Customer NIC"
         '
         'customerSearchBtn
         '
-        Me.customerSearchBtn.Location = New System.Drawing.Point(609, 220)
+        Me.customerSearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customerSearchBtn.Location = New System.Drawing.Point(609, 186)
         Me.customerSearchBtn.Name = "customerSearchBtn"
         Me.customerSearchBtn.Size = New System.Drawing.Size(103, 23)
         Me.customerSearchBtn.TabIndex = 21
@@ -227,81 +248,92 @@ Partial Class Permit_Header
         '
         'landNoInput
         '
-        Me.landNoInput.Location = New System.Drawing.Point(462, 276)
+        Me.landNoInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.landNoInput.Location = New System.Drawing.Point(190, 175)
         Me.landNoInput.Name = "landNoInput"
-        Me.landNoInput.Size = New System.Drawing.Size(100, 20)
+        Me.landNoInput.Size = New System.Drawing.Size(121, 23)
         Me.landNoInput.TabIndex = 23
         '
         'landNo
         '
         Me.landNo.AutoSize = True
-        Me.landNo.Location = New System.Drawing.Point(350, 283)
+        Me.landNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.landNo.Location = New System.Drawing.Point(81, 178)
         Me.landNo.Name = "landNo"
-        Me.landNo.Size = New System.Drawing.Size(48, 13)
+        Me.landNo.Size = New System.Drawing.Size(62, 17)
         Me.landNo.TabIndex = 22
         Me.landNo.Text = "Land No"
         '
         'remarkInput
         '
-        Me.remarkInput.Location = New System.Drawing.Point(462, 328)
+        Me.remarkInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.remarkInput.Location = New System.Drawing.Point(453, 332)
+        Me.remarkInput.Multiline = True
         Me.remarkInput.Name = "remarkInput"
-        Me.remarkInput.Size = New System.Drawing.Size(100, 20)
+        Me.remarkInput.Size = New System.Drawing.Size(108, 20)
         Me.remarkInput.TabIndex = 25
         '
         'remark
         '
         Me.remark.AutoSize = True
-        Me.remark.Location = New System.Drawing.Point(350, 335)
+        Me.remark.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.remark.Location = New System.Drawing.Point(364, 333)
         Me.remark.Name = "remark"
-        Me.remark.Size = New System.Drawing.Size(44, 13)
+        Me.remark.Size = New System.Drawing.Size(57, 17)
         Me.remark.TabIndex = 24
         Me.remark.Text = "Remark"
         '
         'cuttingPersonInput
         '
-        Me.cuttingPersonInput.Location = New System.Drawing.Point(462, 376)
+        Me.cuttingPersonInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cuttingPersonInput.Location = New System.Drawing.Point(491, 232)
         Me.cuttingPersonInput.Name = "cuttingPersonInput"
-        Me.cuttingPersonInput.Size = New System.Drawing.Size(100, 20)
+        Me.cuttingPersonInput.Size = New System.Drawing.Size(100, 23)
         Me.cuttingPersonInput.TabIndex = 27
         '
         'cuttingPerson
         '
         Me.cuttingPerson.AutoSize = True
-        Me.cuttingPerson.Location = New System.Drawing.Point(350, 383)
+        Me.cuttingPerson.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cuttingPerson.Location = New System.Drawing.Point(350, 238)
         Me.cuttingPerson.Name = "cuttingPerson"
-        Me.cuttingPerson.Size = New System.Drawing.Size(101, 13)
+        Me.cuttingPerson.Size = New System.Drawing.Size(135, 17)
         Me.cuttingPerson.TabIndex = 26
         Me.cuttingPerson.Text = "Tree Cutting Person"
         '
         'receiptNumberInput
         '
-        Me.receiptNumberInput.Location = New System.Drawing.Point(688, 407)
+        Me.receiptNumberInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.receiptNumberInput.Location = New System.Drawing.Point(609, 407)
         Me.receiptNumberInput.Name = "receiptNumberInput"
-        Me.receiptNumberInput.Size = New System.Drawing.Size(100, 20)
+        Me.receiptNumberInput.Size = New System.Drawing.Size(100, 23)
         Me.receiptNumberInput.TabIndex = 29
         '
         'receiptNumber
         '
         Me.receiptNumber.AutoSize = True
-        Me.receiptNumber.Location = New System.Drawing.Point(576, 414)
+        Me.receiptNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.receiptNumber.Location = New System.Drawing.Point(481, 407)
         Me.receiptNumber.Name = "receiptNumber"
-        Me.receiptNumber.Size = New System.Drawing.Size(84, 13)
+        Me.receiptNumber.Size = New System.Drawing.Size(110, 17)
         Me.receiptNumber.TabIndex = 28
         Me.receiptNumber.Text = "Receipt Number"
         '
         'paymentAmountInput
         '
-        Me.paymentAmountInput.Location = New System.Drawing.Point(688, 328)
+        Me.paymentAmountInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentAmountInput.Location = New System.Drawing.Point(664, 290)
         Me.paymentAmountInput.Name = "paymentAmountInput"
-        Me.paymentAmountInput.Size = New System.Drawing.Size(100, 20)
+        Me.paymentAmountInput.Size = New System.Drawing.Size(100, 23)
         Me.paymentAmountInput.TabIndex = 31
         '
         'paymentAmount
         '
         Me.paymentAmount.AutoSize = True
-        Me.paymentAmount.Location = New System.Drawing.Point(576, 335)
+        Me.paymentAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentAmount.Location = New System.Drawing.Point(522, 293)
         Me.paymentAmount.Name = "paymentAmount"
-        Me.paymentAmount.Size = New System.Drawing.Size(87, 13)
+        Me.paymentAmount.Size = New System.Drawing.Size(115, 17)
         Me.paymentAmount.TabIndex = 30
         Me.paymentAmount.Text = "Payment Amount"
         '

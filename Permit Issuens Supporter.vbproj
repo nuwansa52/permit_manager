@@ -51,6 +51,9 @@
     <ApplicationIcon>Resources\Everaldo-Crystal-Clear-App-login-manager.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -61,6 +64,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -77,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessDataBase.vb" />
+    <Compile Include="Common.vb" />
     <Compile Include="DivisionalSecretariat.Designer.vb">
       <DependentUpon>DivisionalSecretariat.vb</DependentUpon>
     </Compile>
@@ -215,6 +220,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\App-login-manager-icon.png" />
     <None Include="Resources\Everaldo-Crystal-Clear-App-login-manager.ico" />
     <None Include="Resources\empowerment-checklist-orbit.png" />

@@ -23,9 +23,7 @@ Partial Class city
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.cityLabel = New System.Windows.Forms.Label()
-        Me.divisionalSecTextBox = New System.Windows.Forms.TextBox()
-        Me.clearBtn = New System.Windows.Forms.Button()
-        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.cityInput = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +36,11 @@ Partial Class city
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
+        Me.clearBtn = New System.Windows.Forms.Button()
+        Me.saveBtn = New System.Windows.Forms.Button()
+        Me.district = New System.Windows.Forms.Label()
+        Me.districtInput = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,39 +48,19 @@ Partial Class city
         '
         Me.cityLabel.AutoSize = True
         Me.cityLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cityLabel.Location = New System.Drawing.Point(27, 73)
+        Me.cityLabel.Location = New System.Drawing.Point(27, 63)
         Me.cityLabel.Name = "cityLabel"
         Me.cityLabel.Size = New System.Drawing.Size(34, 16)
         Me.cityLabel.TabIndex = 0
         Me.cityLabel.Text = "City"
         '
-        'divisionalSecTextBox
+        'cityInput
         '
-        Me.divisionalSecTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.divisionalSecTextBox.Location = New System.Drawing.Point(100, 70)
-        Me.divisionalSecTextBox.Name = "divisionalSecTextBox"
-        Me.divisionalSecTextBox.Size = New System.Drawing.Size(233, 22)
-        Me.divisionalSecTextBox.TabIndex = 3
-        '
-        'clearBtn
-        '
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(325, 139)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
-        Me.clearBtn.TabIndex = 4
-        Me.clearBtn.Text = "Clear"
-        Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'saveBtn
-        '
-        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(203, 139)
-        Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
-        Me.saveBtn.TabIndex = 5
-        Me.saveBtn.Text = "Save"
-        Me.saveBtn.UseVisualStyleBackColor = True
+        Me.cityInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cityInput.Location = New System.Drawing.Point(100, 60)
+        Me.cityInput.Name = "cityInput"
+        Me.cityInput.Size = New System.Drawing.Size(233, 22)
+        Me.cityInput.TabIndex = 3
         '
         'MenuStrip1
         '
@@ -152,23 +135,75 @@ Partial Class city
         '
         'search
         '
-        Me.search.Location = New System.Drawing.Point(340, 70)
+        Me.search.Location = New System.Drawing.Point(340, 60)
         Me.search.Name = "search"
         Me.search.Size = New System.Drawing.Size(75, 23)
         Me.search.TabIndex = 24
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(216, 163)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 31
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
+        'clearBtn
+        '
+        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearBtn.Location = New System.Drawing.Point(325, 163)
+        Me.clearBtn.Name = "clearBtn"
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
+        Me.clearBtn.TabIndex = 29
+        Me.clearBtn.Text = "Clear"
+        Me.clearBtn.UseVisualStyleBackColor = True
+        '
+        'saveBtn
+        '
+        Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saveBtn.Location = New System.Drawing.Point(106, 163)
+        Me.saveBtn.Name = "saveBtn"
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
+        Me.saveBtn.TabIndex = 30
+        Me.saveBtn.Text = "Save"
+        Me.saveBtn.UseVisualStyleBackColor = True
+        '
+        'district
+        '
+        Me.district.AutoSize = True
+        Me.district.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.district.Location = New System.Drawing.Point(27, 108)
+        Me.district.Name = "district"
+        Me.district.Size = New System.Drawing.Size(59, 17)
+        Me.district.TabIndex = 32
+        Me.district.Text = "District"
+        '
+        'districtInput
+        '
+        Me.districtInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.districtInput.FormattingEnabled = True
+        Me.districtInput.Location = New System.Drawing.Point(100, 105)
+        Me.districtInput.Name = "districtInput"
+        Me.districtInput.Size = New System.Drawing.Size(233, 24)
+        Me.districtInput.TabIndex = 33
+        '
         'city
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(450, 201)
-        Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.ClientSize = New System.Drawing.Size(450, 211)
+        Me.Controls.Add(Me.districtInput)
+        Me.Controls.Add(Me.district)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
-        Me.Controls.Add(Me.divisionalSecTextBox)
+        Me.Controls.Add(Me.search)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.cityInput)
         Me.Controls.Add(Me.cityLabel)
         Me.Name = "city"
         Me.Text = "City"
@@ -180,9 +215,7 @@ Partial Class city
     End Sub
 
     Friend WithEvents cityLabel As Label
-    Friend WithEvents divisionalSecTextBox As TextBox
-    Friend WithEvents clearBtn As Button
-    Friend WithEvents saveBtn As Button
+    Friend WithEvents cityInput As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
@@ -195,4 +228,9 @@ Partial Class city
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents clearBtn As Button
+    Friend WithEvents saveBtn As Button
+    Friend WithEvents district As Label
+    Friend WithEvents districtInput As ComboBox
 End Class

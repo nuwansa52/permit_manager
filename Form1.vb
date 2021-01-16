@@ -44,6 +44,9 @@ Public Class Form1
         Finally
             con.Close()
         End Try
+
+
+        'departmentInput.SelectedIndex = departmentInput.FindString(sdr.Item("department_id").ToString()).ToString()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

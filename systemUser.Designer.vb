@@ -47,9 +47,10 @@ Partial Class systemUser
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DivisionalSectretariatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GramasewaWasamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermitTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.search = New System.Windows.Forms.Button()
+        Me.edit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -186,9 +187,9 @@ Partial Class systemUser
         'clearBtn
         '
         Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.Location = New System.Drawing.Point(633, 262)
+        Me.clearBtn.Location = New System.Drawing.Point(633, 267)
         Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(90, 32)
+        Me.clearBtn.Size = New System.Drawing.Size(90, 27)
         Me.clearBtn.TabIndex = 20
         Me.clearBtn.Text = "Clear"
         Me.clearBtn.UseVisualStyleBackColor = True
@@ -196,9 +197,9 @@ Partial Class systemUser
         'saveBtn
         '
         Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.saveBtn.Location = New System.Drawing.Point(511, 262)
+        Me.saveBtn.Location = New System.Drawing.Point(413, 267)
         Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(90, 32)
+        Me.saveBtn.Size = New System.Drawing.Size(90, 27)
         Me.saveBtn.TabIndex = 21
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
@@ -227,7 +228,7 @@ Partial Class systemUser
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.DepartmentToolStripMenuItem, Me.PermitTypeToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.DivisionalSectretariatToolStripMenuItem, Me.GramasewaWasamToolStripMenuItem, Me.PermitTypeToolStripMenuItem, Me.DepartmentToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -262,17 +263,17 @@ Partial Class systemUser
         Me.GramasewaWasamToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.GramasewaWasamToolStripMenuItem.Text = "Gramasewa Wasam"
         '
-        'DepartmentToolStripMenuItem
-        '
-        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
-        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.DepartmentToolStripMenuItem.Text = "Department"
-        '
         'PermitTypeToolStripMenuItem
         '
         Me.PermitTypeToolStripMenuItem.Name = "PermitTypeToolStripMenuItem"
         Me.PermitTypeToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.PermitTypeToolStripMenuItem.Text = "Permit Type"
+        '
+        'DepartmentToolStripMenuItem
+        '
+        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.DepartmentToolStripMenuItem.Text = "Department"
         '
         'search
         '
@@ -283,11 +284,22 @@ Partial Class systemUser
         Me.search.Text = "Search"
         Me.search.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edit.Location = New System.Drawing.Point(523, 267)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(90, 27)
+        Me.edit.TabIndex = 28
+        Me.edit.Text = "Edit"
+        Me.edit.UseVisualStyleBackColor = True
+        '
         'systemUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(768, 316)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.saveBtn)
@@ -341,7 +353,8 @@ Partial Class systemUser
     Friend WithEvents CustomerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DivisionalSectretariatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GramasewaWasamToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PermitTypeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents search As Button
+    Friend WithEvents edit As Button
+    Friend WithEvents DepartmentToolStripMenuItem As ToolStripMenuItem
 End Class
