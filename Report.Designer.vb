@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class report
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,10 @@ Partial Class report
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.userTransaction = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -37,41 +35,21 @@ Partial Class report
         Me.Button1.Text = "Permit Report"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'userTransaction
         '
-        Me.Button2.Location = New System.Drawing.Point(262, 40)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(149, 101)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(38, 200)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(149, 101)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(262, 200)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(149, 101)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.userTransaction.Location = New System.Drawing.Point(262, 40)
+        Me.userTransaction.Name = "userTransaction"
+        Me.userTransaction.Size = New System.Drawing.Size(149, 101)
+        Me.userTransaction.TabIndex = 1
+        Me.userTransaction.Text = "User Transactions"
+        Me.userTransaction.UseVisualStyleBackColor = True
         '
         'report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(447, 341)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(447, 196)
+        Me.Controls.Add(Me.userTransaction)
         Me.Controls.Add(Me.Button1)
         Me.Name = "report"
         Me.Text = "Report"
@@ -80,7 +58,5 @@ Partial Class report
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents userTransaction As Button
 End Class

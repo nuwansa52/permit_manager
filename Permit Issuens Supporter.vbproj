@@ -207,6 +207,12 @@
     <Compile Include="Tree Type.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="userTransactions.Designer.vb">
+      <DependentUpon>userTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DivisionalSecretariat.resx">
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tree Type.resx">
       <DependentUpon>Tree Type.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userTransactions.resx">
+      <DependentUpon>userTransactions.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -28,38 +28,11 @@ Public Class PermitIssuence
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'Create a new PDF document
-        Dim doc As PdfDocument = New PdfDocument()
+    Private Class PdfPaddings
+        Inherits Spire.Pdf.PdfPaddings
 
-        'Add a page
-        Dim page As PdfPage = doc.Pages.Add()
-
-        'Create a PdfGrid
-        Dim pdfGrid As PdfGrid = New PdfGrid()
-
-        'Create a DataTable
-        Dim dataTable As DataTable = GetDataTable()
-
-        'Assign data source
-        pdfGrid.DataSource = dataTable
-
-        'Initialize grid style.
-        Dim gridStyle As PdfGridStyle = New PdfGridStyle()
-
-        'Add cell padding.
-        gridStyle.CellPadding = New PdfPaddings(5, 5, 5, 5)
-
-        'Apply style to grid.
-        pdfGrid.Style = gridStyle
-
-        'Draw grid to the page of PDF document
-        pdfGrid.Draw(page, New PointF(10, 10))
-
-        'Save the document
-        doc.Save("Output.pdf")
-
-        'Close the document
-        doc.Close(True)
-    End Sub
+        Public Sub New(left As Single, right As Single, top As Single, bottom As Single)
+            MyBase.New(left, right, top, bottom)
+        End Sub
+    End Class
 End Class

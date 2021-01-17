@@ -39,7 +39,6 @@ Partial Class login
         Me.userName.Name = "userName"
         Me.userName.Size = New System.Drawing.Size(144, 20)
         Me.userName.TabIndex = 2
-        Me.userName.Text = "nuwans"
         '
         'password
         '
@@ -47,7 +46,6 @@ Partial Class login
         Me.password.Name = "password"
         Me.password.Size = New System.Drawing.Size(144, 20)
         Me.password.TabIndex = 3
-        Me.password.Text = "123"
         '
         'userNameLable
         '

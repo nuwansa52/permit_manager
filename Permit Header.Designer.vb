@@ -638,7 +638,7 @@ Partial Class permitHeader
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LogOutToolStripMenuItem.Text = "LogOut"
         '
         'ReportsToolStripMenuItem

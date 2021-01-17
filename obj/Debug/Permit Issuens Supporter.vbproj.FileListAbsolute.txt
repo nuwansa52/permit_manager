@@ -67,3 +67,15 @@ D:\Projects\Visual Studeo\permit_manager\obj\Debug\AxInterop.AcroPDFLib.dll
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit Issuens Supporter.vbproj.ResolveComReference.cache
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.PermitIssuence.resources
 D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.report.resources
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\PdfSharp.Charting.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\PdfSharp.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Spire.License.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Spire.Pdf.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Microsoft.mshtml.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\PdfSharp.xml
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\PdfSharp.Charting.xml
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Spire.License.xml
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\Spire.Pdf.xml
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\de\PdfSharp.resources.dll
+D:\Projects\Visual Studeo\permit_manager\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\Projects\Visual Studeo\permit_manager\obj\Debug\Permit_Issuens_Supporter.userTransactions.resources
